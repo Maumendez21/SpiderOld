@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns:kml="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>San Jerónimo Expreso Tec - Ruta y Paradas</name>
+    <description><![CDATA[Horarios, Rutas y Paradas<br>Semestre AGOSTO-DICIEMBRE 2017<br>http://movilidad.mty.itesm.mx<br>Ver. 16/jun/2017<br>Mayor información: (81) 8358-2000 ext 3668 y 3682, expresotec.mty@itesm.mx o movilidad.mty@itesm.mx]]></description>
+    <Style id="icon-503-DB4436-normal">
+      <IconStyle>
+        <color>ff3644db</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-503-DB4436-highlight">
+      <IconStyle>
+        <color>ff3644db</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-503-DB4436">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-503-DB4436-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-503-DB4436-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-503-DB4436-nodesc-normal">
+      <IconStyle>
+        <color>ff3644db</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-503-DB4436-nodesc-highlight">
+      <IconStyle>
+        <color>ff3644db</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-503-DB4436-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-503-DB4436-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-503-DB4436-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-F287B7-4000-normal">
+      <LineStyle>
+        <color>ffb787f2</color>
+        <width>4</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-F287B7-4000-highlight">
+      <LineStyle>
+        <color>ffb787f2</color>
+        <width>6</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-F287B7-4000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-F287B7-4000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-F287B7-4000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Ruta San Jerónimo 14.8KM 35MIN</name>
+      <Placemark>
+        <name>Ruta San Jerónimo 14.8KM</name>
+        <description>http://expresotec.mty.itesm.mx/web/ruta_jeronimo.php</description>
+        <styleUrl>#line-F287B7-4000</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -100.372127,25.69548,0
+            -100.372592,25.695177,0
+            -100.373386,25.694642,0
+            -100.373839,25.694345,0
+            -100.373966,25.693078,0
+            -100.373838,25.692847,0
+            -100.37348,25.692306,0
+            -100.373223,25.691888,0
+            -100.373088,25.691613,0
+            -100.373153,25.690998,0
+            -100.373125,25.690759,0
+            -100.373004,25.690502,0
+            -100.372911,25.690421,0
+            -100.372512,25.690133,0
+            -100.372467,25.69004,0
+            -100.372469,25.689542,0
+            -100.372112,25.689257,0
+            -100.371822,25.689156,0
+            -100.370563,25.688324,0
+            -100.370238,25.68767,0
+            -100.369852,25.686924,0
+            -100.373441,25.684498,0
+            -100.373694,25.684406,0
+            -100.371747,25.682274,0
+            -100.371333,25.681856,0
+            -100.370948,25.681243,0
+            -100.370503,25.68143,0
+            -100.369181,25.682154,0
+            -100.368687,25.682176,0
+            -100.368169,25.682032,0
+            -100.36785,25.681828,0
+            -100.366861,25.681383,0
+            -100.366378,25.680996,0
+            -100.366256,25.68079,0
+            -100.365845,25.681049,0
+            -100.365576,25.681482,0
+            -100.365028,25.682576,0
+            -100.364805,25.682941,0
+            -100.364167,25.683792,0
+            -100.364904,25.684044,0
+            -100.366331,25.684462,0
+            -100.365897,25.685017,0
+            -100.365536,25.685324,0
+            -100.36456,25.686073,0
+            -100.36155,25.682233,0
+            -100.361529,25.680745,0
+            -100.359557,25.680239,0
+            -100.358846,25.68021,0
+            -100.358325,25.68036,0
+            -100.356517,25.68155,0
+            -100.353471,25.683641,0
+            -100.352903,25.683874,0
+            -100.352523,25.683854,0
+            -100.352201,25.683726,0
+            -100.352286,25.681846,0
+            -100.352599,25.673766,0
+            -100.352986,25.672129,0
+            -100.353386,25.671291,0
+            -100.353168,25.670726,0
+            -100.352186,25.670198,0
+            -100.349493,25.669572,0
+            -100.342711,25.667592,0
+            -100.337244,25.666263,0
+            -100.334817,25.665829,0
+            -100.327879,25.664692,0
+            -100.312281,25.661921,0
+            -100.310793,25.661592,0
+            -100.307464,25.661737,0
+            -100.304974,25.662806,0
+            -100.301309,25.66531,0
+            -100.298294,25.666594,0
+            -100.297651,25.666669,0
+            -100.297428,25.666076,0
+            -100.297287,25.659113,0
+            -100.292756,25.651677,0
+            -100.292655,25.651338,0
+            -100.292428,25.651235,0
+            -100.2922,25.651299,0
+            -100.292143,25.651467,0
+            -100.292149,25.651672,0
+            -100.29054,25.652935,0
+            -100.290268,25.652998,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>00:00 Alfonso Junco (Inicio)</name>
+        <styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -100.3721,25.695416,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>00:01 Anatole France</name>
+        <styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -100.373864,25.69283,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>00:02 Jean Racine</name>
+        <styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -100.372111,25.689232,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>00:04 Iglesia (Antonio Caso)</name>
+        <styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -100.370007,25.687137,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>00:06 Antonio Caso (Anillo Periférico)</name>
+        <styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -100.373347,25.684614,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>00:08 Av. San Jemo (Seven 7)</name>
+        <styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -100.370447,25.681408,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>00:09 Parque (Av. San Jemo y Ruiseñores)</name>
+        <styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -100.367824,25.68182,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>00:11 Justo Sierra (Parque)</name>
+        <styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -100.364807,25.683117,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>00:14 Alan Poe (OXXO)</name>
+        <styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -100.364576,25.686007,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>00:16 Calle Rabelais</name>
+        <styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -100.362215,25.682962,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>00:19 Estacionamieno Galerías Monterrey</name>
+        <styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -100.356594,25.681409,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>00:25 CUM (Av. Gonzalitos)</name>
+        <styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -100.352458,25.677306,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Tecnológico de Monterrey, Campus Monterrey</name>
+        <styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -100.291017,25.651338,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Tabla de Horarios (Entradas y Salidas)</name>
+        <description><![CDATA[<img src="https://lh3.googleusercontent.com/siPEu9tdzBhUSegYcCUQ8RiHNvFozCGvZc2NY46M_hTzMvKvd77Ohyy9BxLppBsE4Zlv848et0c60cDNEA0zzSyFf-AfQzf_QhL64ZpGoD4g57r6fa5lgCqglL-sekY" height="200" width="auto" /><br><br>http://movilidad.mty.itesm.mx/expresotec/ruta_jeronimo.php]]></description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://lh3.googleusercontent.com/siPEu9tdzBhUSegYcCUQ8RiHNvFozCGvZc2NY46M_hTzMvKvd77Ohyy9BxLppBsE4Zlv848et0c60cDNEA0zzSyFf-AfQzf_QhL64ZpGoD4g57r6fa5lgCqglL-sekY</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -100.3684665,25.6880152,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

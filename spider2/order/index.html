@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Spider Fleet, tu Flotilla Inteligente</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Spider Fleet te ayuda a controlar tu flotilla de forma fácil y eficiente">
+        <link rel="icon" href="../img/spider.ico" />
+        <link href="../css/jquery.steps.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"/>
+        <link href="../css/theme.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="../css/theme-red.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body>
+        <a id="start"></a>
+        <!-- Header superior -->
+        <div class="nav-container">
+            <!-- Menu Smartphone -->
+            <div class="bar bar-sm visible-xs">
+                <div class="container">
+                    <div class="row">
+                        <!-- Logo -->
+                        <div class="col-3 col-md-2">
+                            <a href="../index.html">
+                                <img class="logo" alt="logo" src="../img/logospider.png"/>
+                            </a>
+                        </div>
+                        <!-- Menu -->
+                        <div class="col-9 col-md-10 text-right">
+                            <a href="#" class="hamburger-toggle" data-toggle-class="#menu;hidden-xs">
+                                <i class="material-icons">menu</i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Menu Normal -->
+            <div id="menu" class="bar bar--sm bar-1 hidden-xs">
+                <div class="container">
+                    <div class="row">
+                        <!-- Logo -->
+                        <div class="col-lg-1 col-md-2 hidden-xs">
+                            <div class="bar__module">
+                                <a href="../index.html">
+                                    <img class="logo" alt="logo" src="../img/logospider.png"/>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-11 col-md-12 text-right text-left-xs text-left-sm">
+                            <!-- Menu -->
+                            <div class="bar__module">
+                                <ul class="menu-horizontal text-left">
+                                    <li><a href="#">Características</a></li>
+                                    <li><a href="#">Precios</a></li>
+                                    <li><a href="#">Preguntas Frecuentes</a></li>
+                                    <li><a href="#">Contacto</a></li>
+                                </ul>
+                            </div>
+                            <!-- Botones -->
+                            <div class="bar__module">
+                                <a class="btn btn--sm type--uppercase" href="#">
+                                    <span class="btn__text">
+                                        Iniciar Sesión
+                                    </span>
+                                </a>
+                                <a class="btn btn--sm btn--primary type--uppercase" href="#">
+                                    <span class="btn__text">
+                                        Registrarse
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contenido -->
+        <div class="main-container">
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1>Orden de Compra</h1>
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 col-lg-8">
+                            <div id="spider-wizard" class="active">
+                                <h5>Selección de Plan</h5>
+                                <section class="text-center">
+                                    <div class="pos-vertical-center">
+                                        <form class="row">
+                                            <div class="col-md-4">
+                                                <div class="input-radio">
+                                                    <span class="input__label">Free</span>
+                                                    <input id="radio-free" type="radio" name="radio" value="radio-free" checked />
+                                                    <label for="radio-free"></label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="input-radio">
+                                                    <span class="input__label">Smart</span>
+                                                    <input id="radio-smart" type="radio" name="radio" value="radio-smart" />
+                                                    <label for="radio-smart"></label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="input-radio">
+                                                    <span class="input__label">Full</span>
+                                                    <input id="radio-full" type="radio" name="radio" value="radio-full" />
+                                                    <label for="radio-full"></label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label>Numero de Unidades:</label>
+                                                <input type="text" name="name" placeholder="Cantidad" value="1" />
+                                            </div>
+                                            <div class="col-md-12">
+                                                <label>Tipo de suscripción:</label>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="card card-2 text-center">
+                                                            <div class="card__body">
+                                                                <h4>Plan Mensual</h4>
+                                                                <strong>$99 / vehiculo / mes</strong>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="card card-2 text-center">
+                                                            <div class="card__body">
+                                                                <span class="label">Ahorre 16 %</span>
+                                                                <h4>Plan Anual</h4>
+                                                                <strong>$990 / vehiculo / año</strong>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </section>
+                                <h5>Cotización</h5>
+                                <section class="text-center">
+                                    <div class="pos-vertical-center">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="boxed boxed--border cart-total">
+                                                    <div class="row">
+                                                        <div class="col-4">
+                                                            <span class="h5">Producto</span>
+                                                        </div>
+                                                        <div class="col-4 text-center">
+                                                            <span class="h5">Cantidad</span>
+                                                        </div>
+                                                        <div class="col-4 text-center">
+                                                            <span class="h5">Costo</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-4">
+                                                            <span>Plan Spider Fleet SMART</span>
+                                                        </div>
+                                                        <div class="col-4 text-center">
+                                                            <span>5</span>
+                                                        </div>
+                                                        <div class="col-4 text-center">
+                                                            <span>$495.00</span>
+                                                        </div>
+                                                    </div>
+                                                    <hr />
+                                                    <div class="row">
+                                                        <div class="col-4">
+                                                            <span class="h5">Total:</span>
+                                                        </div>
+                                                        <div class="col-4 offset-md-4 text-center">
+                                                            <span><strong>$495.00</strong></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <h5>Confirmación</h5>
+                                <section class="text-center">
+                                    <div class="pos-vertical-center">
+                                        <h4>Use Wizards for onboarding, form data collection and more</h4>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Footer -->
+            <footer class="footer-3 text-center-xs space--xs">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="type--fine-print">
+                                Sistema de Administración de Flotillas Vehiculares
+                            </p>
+                        </div>
+                        <div class="col-md-6 text-right text-center-xs">
+                            <span class="type--fine-print">&copy;
+                                <span class="update-year"></span> Spider Fleet SAPI de CV</span>
+                            <a class="type--fine-print" href="#">Aviso de Privacidad</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- Slider -->
+        <a class="back-to-top inner-link" href="#start" data-scroll-class="100vh:active">
+            <i class="material-icons">expand_less</i>
+        </a>
+        <!-- Scripts -->
+        <script src="../js/jquery-3.1.1.min.js"></script>
+        <script src="../js/jquery.steps.min.js"></script>
+        <script src="../js/smooth-scroll.min.js"></script>
+        <script type="text/javascript" src="https://cdn.conekta.io/js/latest/conekta.js"></script>
+        <script src="../js/scripts.js"></script>
+        <script type="text/javascript" src="../js/order.js"></script>
+    </body>
+</html>

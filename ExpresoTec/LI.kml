@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns:kml="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Lincoln Expreso Tec - Ruta y Paradas</name>
+    <description><![CDATA[Horarios, Rutas y Paradas<br>Semestre AGOSTO-DICIEMBRE 2017<br>http://movilidad.mty.itesm.mx<br>Ver. 16/jun/2017<br>Mayor información: (81) 8358-2000 ext 3668 y 3682, expresotec.mty@itesm.mx o movilidad.mty@itesm.mx]]></description>
+    <Style id="icon-503-DB4436-normal">
+      <IconStyle>
+        <color>ff3644db</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-503-DB4436-highlight">
+      <IconStyle>
+        <color>ff3644db</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-503-DB4436">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-503-DB4436-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-503-DB4436-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-503-DB4436-nodesc-normal">
+      <IconStyle>
+        <color>ff3644db</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-503-DB4436-nodesc-highlight">
+      <IconStyle>
+        <color>ff3644db</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-503-DB4436-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-503-DB4436-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-503-DB4436-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-004B88-4000-normal">
+      <LineStyle>
+        <color>ff884b00</color>
+        <width>4</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-004B88-4000-highlight">
+      <LineStyle>
+        <color>ff884b00</color>
+        <width>6</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-004B88-4000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-004B88-4000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-004B88-4000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Ruta Lincoln 18.9KM 55MIN</name>
+      <Placemark>
+        <name>Tabla de Horarios (Entradas y Salidas)</name>
+        <description><![CDATA[<img src="https://lh6.googleusercontent.com/kT03rU5zz-9a2OQhfiEJm43T5OcesfWXEs-XJYcVakcBhoAck5BLKbS72eoLA-AaQMoENLLzIWwuIgAddz5E8qHJviFK60od81-zo6GB1wNmSkArS-Dvp-xvlpj_sP6TAg" height="200" width="auto" /><br><br>http://movilidad.mty.itesm.mx/expresotec/ruta_linco.php]]></description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://lh6.googleusercontent.com/kT03rU5zz-9a2OQhfiEJm43T5OcesfWXEs-XJYcVakcBhoAck5BLKbS72eoLA-AaQMoENLLzIWwuIgAddz5E8qHJviFK60od81-zo6GB1wNmSkArS-Dvp-xvlpj_sP6TAg</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -100.3711852,25.7432109,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Ruta Lincoln 18.9KM</name>
+        <description>http://movilidad.mty.itesm.mx/expresotec/ruta_linco.php</description>
+        <styleUrl>#line-004B88-4000</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -100.388176,25.74613,0
+            -100.385975,25.74389,0
+            -100.381713,25.739082,0
+            -100.378601,25.735665,0
+            -100.378729,25.735324,0
+            -100.37959,25.734331,0
+            -100.380685,25.73338,0
+            -100.381721,25.73299,0
+            -100.381077,25.73219,0
+            -100.380092,25.732698,0
+            -100.379554,25.733024,0
+            -100.378147,25.734443,0
+            -100.377688,25.735041,0
+            -100.375985,25.736383,0
+            -100.372618,25.732625,0
+            -100.365332,25.72471,0
+            -100.358482,25.719858,0
+            -100.342774,25.70958,0
+            -100.342816,25.709378,0
+            -100.342806,25.709208,0
+            -100.3427,25.70917,0
+            -100.342567,25.709071,0
+            -100.342525,25.709017,0
+            -100.342495,25.704696,0
+            -100.342533,25.704334,0
+            -100.342905,25.701624,0
+            -100.343178,25.69964,0
+            -100.343225,25.699503,0
+            -100.343216,25.699373,0
+            -100.343602,25.69656,0
+            -100.343686,25.696512,0
+            -100.343767,25.696357,0
+            -100.343731,25.696172,0
+            -100.343657,25.696047,0
+            -100.343653,25.695884,0
+            -100.343719,25.695763,0
+            -100.343712,25.695459,0
+            -100.344334,25.690428,0
+            -100.34162,25.686377,0
+            -100.341046,25.685551,0
+            -100.34035,25.68453,0
+            -100.340061,25.684176,0
+            -100.339212,25.683278,0
+            -100.338872,25.682921,0
+            -100.338506,25.682564,0
+            -100.337529,25.681582,0
+            -100.336751,25.680845,0
+            -100.335728,25.679864,0
+            -100.334884,25.679051,0
+            -100.334067,25.678265,0
+            -100.333633,25.678224,0
+            -100.33182,25.678009,0
+            -100.332097,25.676566,0
+            -100.332431,25.675514,0
+            -100.333141,25.672323,0
+            -100.33373,25.670161,0
+            -100.334287,25.668361,0
+            -100.334648,25.667551,0
+            -100.334814,25.667081,0
+            -100.335072,25.666759,0
+            -100.335552,25.666533,0
+            -100.335695,25.666304,0
+            -100.335508,25.6661,0
+            -100.327697,25.664863,0
+            -100.318058,25.663091,0
+            -100.31368,25.662363,0
+            -100.311439,25.662071,0
+            -100.309501,25.66173,0
+            -100.308111,25.661752,0
+            -100.305787,25.662325,0
+            -100.301093,25.665385,0
+            -100.297898,25.666668,0
+            -100.297618,25.666657,0
+            -100.297391,25.666173,0
+            -100.297306,25.659349,0
+            -100.297199,25.658958,0
+            -100.292678,25.651619,0
+            -100.292645,25.651288,0
+            -100.292395,25.651212,0
+            -100.292245,25.651303,0
+            -100.292185,25.651427,0
+            -100.292161,25.651594,0
+            -100.291952,25.651803,0
+            -100.291267,25.652356,0
+            -100.290573,25.65288,0
+            -100.290296,25.652976,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>00:00 7 Eleven (Pedro Infante) (Inicio)</name>
+        <styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -100.388215,25.746068,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>00:06 Parabús (Secundaria Num. 8 Profr. Juan Garza Garza)</name>
+        <styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -100.375176,25.735391,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>00:10 Parabús (IMSS Hospital de Cardiologia 34 y WalMart)</name>
+        <styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -100.369006,25.728488,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>00:16 Calle Nueva Inglaterra (OXXO)</name>
+        <styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -100.355318,25.717619,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>00:20 Parabús Rodrigo Gómez y Lincoln</name>
+        <styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -100.342807,25.709191,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>00:25 Pastelería Lety</name>
+        <styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -100.343211,25.699497,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>00:29 Benvides Rotonda</name>
+        <styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -100.343711,25.695799,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>00:33 Plaza San Antonio (Aramberri)</name>
+        <styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -100.337553,25.681557,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>00:35 V. Carranza Yazmisha Flower Shop</name>
+        <styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -100.33205,25.678014,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Tecnológico de Monterrey, Campus Monterrey</name>
+        <styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -100.291067,25.65144,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

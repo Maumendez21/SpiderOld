@@ -1,0 +1,144 @@
+/*================================================================================
+	Item Name: Kode
+	Description: Premium Bootstrap Admin Template
+	Author: Egemen Kapusuz
+	Author URL: http://www.themeforest.net/user/egemem
+================================================================================*/
+
+/* =================================================================================
+smaller than 1280 
+================================================================================= */
+@media screen and (max-width: 1280px) {
+	.topmenu{display: none;}
+}
+
+/* =================================================================================
+smaller than 1024 
+================================================================================= */
+@media screen and (max-width: 1024px) {
+	.profilebox b{display: none;}
+	.searchform{display: none;}
+	.sidebar{display: none;}
+	.content{margin-left: 0 !important;}
+	.sidebar-open-button{display: none;}
+	.sidebar-open-button-mobile{display: block;}
+	.social-stats{bottom: 100px;}
+	.topstats li{width: 33%;}
+	.demo-sidebarmenu .sidebar{display: block;}
+	#documenter-4-4 .padding-l-0, #documenter-4-4 .padding-r-0, #documenter-4-5 .padding-l-0, #documenter-4-5 .padding-r-0 {
+		padding: 0px;
+	}
+	#documenter_content #documenter-4-6.method.row {
+		margin-right: 0px;
+		margin-left: 0px;
+	}
+	#documenter_content #documenter-4-6 .col-lg-3 {
+		padding: 0px;
+	}
+}
+
+/* =================================================================================
+smaller than 760 
+================================================================================= */
+@media screen and (max-width: 760px) {
+	.page-header .right{display: none;}
+	.sidebar{display: none; width: 100%;}
+	.presentation .list{float: left; margin-top: 20px;}
+	.applogo{display: none;}
+	.container-default, .container-widget{margin-left:-20px; margin-right: -20px;}
+	.container-padding, .container-no-padding{margin-left:-40px; margin-right: -40px;}
+	.social-content{padding-left: 10px; padding-right: 10px;}
+	.chart-with-stats .top-label{right: 20px;}
+	.mailbox-menu .menu li{display: block; width: 100%; border-right:none; border-bottom: 1px solid rgba(0, 0, 0, 0.08);}
+	.chat .title{height: auto;}
+	.profile-left .btn{display: none;}
+	.topstats li{width: 50%;}
+}
+
+/* =================================================================================
+smaller than 480
+================================================================================= */
+@media screen and (max-width: 480px) {
+	.method .method-copy .method-list .method-list-group .method-list-item .method-list-item-description {
+		width: 100%;
+		margin: 0px;
+	}
+	.method .method-copy .method-list .method-list-group .method-list-item .method-list-item-label {
+		float: none;
+		text-align: left;
+		margin: 0px;
+		margin-bottom: 7px;
+	}
+	#documenter-4-4 .padding-l-0, #documenter-4-4 .padding-r-0, #documenter-4-5 .padding-l-0, #documenter-4-5 .padding-r-0 {
+		padding: 0px;
+	}
+	#documenter_content #documenter-4-6.method.row {
+		margin-right: 0px;
+		margin-left: 0px;
+	}
+	#documenter_content #documenter-4-6 .col-lg-3 {
+		padding: 0px;
+	}
+	.pixxett-ui .scheme-container {
+		padding: 30px 15px;
+	}
+	.pixxett-ui .opblock .opblock-summary-description,
+	.pixxett-ui .opblock .opblock-summary-operation-id,
+	.pixxett-ui .opblock .opblock-summary-path,
+	.pixxett-ui .opblock .opblock-summary-path__deprecated{
+		font-size: 12px;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+	.opblock-section {
+		padding: 0px 15px;
+	}
+	.pixxett-ui .opblock-body select {
+		min-width: inherit;
+	}
+	.pixxett-ui .opblock .opblock-section-header, .pixxett-ui .opblock .opblock-section-header label {
+		display: block;
+	}
+}
+/* =================================================================================
+smaller than 428 
+================================================================================= */
+@media screen and (max-width: 428px) {
+	.top-right{display: none;}
+	.applogo{
+		padding-left: 0;
+		background: none;
+		display: block;
+		position: absolute;
+		width: 100%;
+		z-index: -4;
+	}
+	.topstats li{width: 100%;}
+	.pixxett-ui .scheme-container {
+		padding: 30px 15px;
+	}
+	.pixxett-ui .opblock .opblock-summary-description,
+	.pixxett-ui .opblock .opblock-summary-operation-id,
+	.pixxett-ui .opblock .opblock-summary-path,
+	.pixxett-ui .opblock .opblock-summary-path__deprecated{
+		font-size: 12px;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+	.opblock-section {
+		padding: 0px 15px;
+	}
+	.pixxett-ui .opblock-body select {
+		min-width: inherit;
+	}
+	.pixxett-ui .opblock .opblock-section-header, .pixxett-ui .opblock .opblock-section-header label {
+		display: block;
+	}
+
+}
+
+
+
+

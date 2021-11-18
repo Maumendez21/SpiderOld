@@ -1,0 +1,1231 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Control de flotillas - Spider Fleet</title>
+    
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Monitoreo en tiempo real de vehiculos: Geolocalización, Conductas de manejo, Rutas inteligentes, Control de Combustible y Mantenimientos de flotillas">
+    <meta property="og:title" content="Control de flotillas - Spider Fleet" />
+    <meta property="og:description" content="Monitoreo en tiempo real de vehiculos: Geolocalización, Conductas de manejo, Rutas inteligentes, Control de Combustible y Mantenimientos de flotillas" />
+    <meta property="og:image" content="http://spider.com.mx/img/itinerarios-min.png" />
+    <meta property="og:type" content="website" />
+    
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/stack-interface.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/socicon.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/lightbox.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/flickity.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/iconsmind.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/jquery.steps.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/theme-red.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/font-rubiklato.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700%7CRubik:300,400,500" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-86098207-1', 'auto');
+  ga('send', 'pageview');
+    </script>
+
+    <!--<script>
+/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(e){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var e=this.createElement("script");n&&(this.domain=n),e.id="js-iframe-async",e.src="https://assets.zendesk.com/embeddable_framework/main.js",this.t=+new Date,this.zendeskHost="spider.zendesk.com",this.zEQueue=a,this.body.appendChild(e)},o.write('<body onload="document._l();">'),o.close()}();
+/*]]>*/</script>-->
+
+    <!-- Facebook Pixel Code -->
+    <script>
+            !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+            n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+            document,'script','https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '1666026893690877'); // Insert your pixel ID here.
+            fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+             src="https://www.facebook.com/tr?id=1666026893690877&ev=PageView&noscript=1" />
+    </noscript>
+
+    <!-- Hotjar Tracking Code for www.spider.com.mx -->
+    <script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:514170,hjsv:5};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+
+    <!-- Google Code para etiquetas de remarketing -->
+    <!--------------------------------------------------
+    Es posible que las etiquetas de remarketing todavía no estén asociadas a la información de identificación personal o que estén en páginas relacionadas con las categorías delicadas. Para obtener más información e instrucciones sobre cómo configurar la etiqueta, consulte http://google.com/ads/remarketingsetup.
+    --------------------------------------------------->
+    <!--<script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 853552191;
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    /* ]]> */
+    </script>-->
+    <!--<div style="display:none">
+        <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+        </script>
+    </div>
+        <noscript>
+            <div style="display:inline;">
+                <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/853552191/?guid=ON&amp;script=0" />
+            </div>
+        </noscript>-->
+
+</head>
+
+<style type="text/css">
+.sobre {
+ position:absolute;
+ top:10px;
+ left:0px;
+ border:none;
+ height:200;
+}
+.sobre1 {
+ position:relative;
+ top:0px;
+ left:0px;
+ border:none;
+}
+.rowG {
+background-color:#fff;
+background:#fff;
+}
+p { 
+font-size:14px; 
+color:#f22703; 
+font-weight:bold; 
+font-style:italic;
+}
+.sTitulo{
+font-weight:bold; 
+}
+.sletra {
+font-size:35px; 
+color:#f22703; 
+font-weight:bold; 
+font-style:normal;
+}
+.smenu {
+font-size:15px; 
+color:#f22703; 
+font-weight:bold; 
+font-style:normal;
+}
+</style>
+
+<body data-smooth-scroll-offset="77">
+    <header>
+        <section class="bar bar-3 bar--sm bg--secondary rowG">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="bar__module">
+                            <span class="type--fade"><!--Spider Fleet | Sistema de Control de Flotillas Vehiculares--></span>
+							<!-- <img class="sobre"  src="img/8.png" /> -->
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-right text-left-xs text-left-sm">
+                        <div class="bar__module">
+                            <ul class="menu-horizontal">
+                                <li>
+                                    <div class="modal-instance">
+                                        <a href="http://spiderfleetsystem.azurewebsites.net/">Ir al sistema</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--end of row-->
+            </div>
+            <!--end of container-->
+        </section>
+		
+        <div class="nav-container" >
+            <div class="bar bar--sm visible-xs" >
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-3 col-sm-2">
+                            <a href="index.html">
+                                <img class="logo logo-dark" alt="Control de flotillas Spider Fleet" src="img/8.png" />
+                                <img class="logo logo-light" alt="Monitoreo 100% en tiempo real Spider Fleet" src="img/8.png" />
+                            </a>
+                        </div>
+                        <div class="col-xs-9 col-sm-10 text-right">
+                            <a href="index.html" class="hamburger-toggle" data-toggle-class="#menu1;hidden-xs">
+                                <i class="icon icon--sm stack-interface stack-menu"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!--end of row-->
+                </div>
+                <!--end of container-->
+            </div>
+            <!--end bar-->
+			
+			
+			<nav class="bar bar-toggle" data-scroll-class="100px:pos-fixed">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-1 col-sm-2 col-xs-3">
+                            <div class="bar__module">
+                                <a href="index.html">
+                                    <img alt="logo" class="sobre" src="img/8.png"/>
+                                    <!-- <img class="logo logo-light" alt="logo" src="img/8.png" height="200" /> -->
+                                </a>
+                            </div>
+                            <!--end module-->
+                        </div>
+                        <div class="col-md-11 col-sm-10 col-xs-9">
+                            <div class="bar__module">
+                                <div class="modal-instance pull-right">
+                                    
+									
+									<div class="bar__module">
+										<a class="btn btn--sm type--uppercase" href="caracteristicas/index.html">
+											<span class="btn__text">
+												Caracter&#237sticas
+											</span>
+										</a>
+										<a class="btn btn--sm type--uppercase" href="blog/index.html">
+											<span class="btn__text">
+												Blog
+											</span>
+										</a>
+										<a class="btn btn--sm type--uppercase" href="contacto/index.html">
+											<span class="btn__text">
+												Contacto
+											</span>
+										</a>
+									</div>
+									
+									
+                                </div>
+                                <!--end of modal instance-->
+                            </div>
+                            <!--end module-->
+                        </div>
+                        <!--end columns-->
+                    </div>
+                    <!--end of row-->
+                </div>
+                <!--end of container-->
+            </nav>
+			
+			
+			
+            <!-- <nav id="menu1" class="bar bar--sm bar-1 hidden-xs" data-scroll-class="100px:pos-fixed"> -->
+                <!-- <div class="container"> -->
+                    <!-- <div class="row"> -->
+                        <!-- <div class="col-md-1 col-sm-2 hidden-xs"> -->
+                            <!-- <div class="bar__module"> -->
+                                <!-- <a href="index.html"> -->
+                                    <!-- <!--<img class="logo logo-dark" alt="logo" src="img/8.png" /> -->
+                                    <!-- <img class="logo logo-light" alt="logo" src="img/8.png" />--> 
+                                <!-- </a> -->
+                            <!-- </div> -->
+                            <!-- <!--end module-->
+                        <!-- </div> -->
+                        <!-- <div class="col-md-11 col-sm-12 text-right text-left-xs text-left-sm"> -->
+                            <!-- <div class="bar__module"> -->
+                                <!-- <ul class="menu-horizontal text-left"> -->
+                                    <!-- <li> -->
+                                        <!-- <a href="caracteristicas/index.html">Caracter&#237sticas</a> -->
+                                        <!-- <!--end dropdown container--> 
+                                    <!-- </li> -->
+                                    <!-- <li> -->
+                                        <!-- <a href="blog/index.html">Blog</a> -->
+                                        <!-- <!--end dropdown container-->
+                                    <!-- </li> -->
+                                    <!-- <li> -->
+                                        <!-- <a href="contacto/index.html">Contacto</a> -->
+                                        <!-- <!--end dropdown container--> 
+                                    <!-- </li> -->
+                                <!-- </ul> -->
+                            <!-- </div> -->
+                        <!-- </div> -->
+                    <!-- </div> -->
+                    <!-- <!--end of row--> 
+                <!-- </div> -->
+                <!-- <!--end of container--> 
+            <!-- </nav> -->
+            <!--end bar-->
+        </div>
+		
+		
+        <section class="cover space--sm unpad--bottom bg--secondary switchable text-center space--xxs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="mt--2">
+                            <div class="typed-headline">
+                                <span class="h1 inline-block type--bold">Mejora radicalmente la operación de tu flotilla.</span>
+                                <!--<span class="h1 inline-block typed-text typed-text--cursor color--primary" data-typed-strings="conductas de manejo, control de combustible, itinerarios inteligentes , GPS"></span>-->
+                            </div>
+                            <p class="lead"> Spider Fleet te permite evaluar el desempe&#241o de manejo, controlar tu consumo de combustible y rastrear de forma inteligente tus veh&#237culos </p>
+                            <div class="modal-instance block">
+                                <a class="col-sm-5 btn btn--primary type--uppercase modal-trigger" onclick="Prospecto_rojo_goog_report_conversion()" >
+                                    <span class="btn__text" style="font-size:16px">
+                                     Quiero saber más
+                                    </span>
+                                    <!--onclick="record_prospecto()"-->
+                                </a>
+                                <div id="modal_contacto" class="modal-container">
+                                    <div class="modal-content">
+                                        <section class="unpad ">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-sm-6 col-md-offset-3 col-sm-offset-3 col-xs-12">
+                                                        <div class="feature feature-1 text-center">
+                                                            <img alt="Image" src="img/camioneta-min2.jpg" />
+                                                            <div class="feature__body boxed boxed--lg boxed--border">
+                                                                <div class="modal-close modal-close-cross"></div>
+                                                                <div class="text-block">
+                                                                    <h2>Conoce más sobre Spider Fleet</h2>
+                                                                    <p>
+                                                                        Compartenos tu información, y nos pondremos en contacto contigo.
+                                                                    </p>
+                                                                </div>
+                                                                <form class="form-lead" action="//mrare.us8.list-manage.com/subscribe/post?u=77142ece814d3cff52058a51f&amp;id=f300c9cce8" data-success="Gracias. Nos pondremos en contacto muy pronto" data-error="Por favor, completa toda la información">
+                                                                    <input class="validate-required" type="text" name="NAME" placeholder="Nombre" />
+                                                                    <input class="validate-required validate-email" name="EMAIL" type="email" placeholder="Email" />
+                                                                    <input class="validate-required" type="tel" name="TELEFONO" placeholder="Telefono" />
+
+                                                                    <button type="submit" class="form-send btn btn--primary type--uppercase" style="font-size:16px" onclick="Lead_Rojo_goog_report_conversion()">Quiero saber más</button>
+                                                                    <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                                                                        <input class="form-send" type="text" name="b_77142ece814d3cff52058a51f_f300c9cce8" tabindex="-1" value="">
+                                                                    </div>
+                                                                </form>	
+                                                            </div>
+                                                        </div>
+                                                        <!--end feature-->
+                                                    </div>
+                                                </div>
+                                                <!--end of row-->
+                                            </div>
+                                            <!--end of container-->
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+							<div class="col-sm-1">
+								<span >
+                                             
+                                </span>
+							</div>
+							<!--boton 2 VERDE-->
+							<div class="modal-instance block">
+                                <a class="col-sm-6 btn btn--primary-3 type--uppercase modal-trigger" onclick="Prospecto_verde_goog_report_conversion()" >
+                                    <span class="btn__text" style="font-size:16px">
+                                         Quiero mi DEMO
+                                    </span>
+                                    <!--onclick="record_prospecto()"-->
+                                </a>
+                                <div class="modal-container">
+                                    <div class="modal-content">
+                                        <section class="unpad ">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-sm-6 col-md-offset-3 col-sm-offset-3 col-xs-12">
+                                                        <div class="boxed boxed--lg bg--white text-center feature">
+                                                            <div class="modal-close modal-close-cross"></div>
+
+                                                            <h2>Pide tu prueba GRATIS</h2>
+                                                            <p>
+                                                                Agendaremos una llamada o visita, para que conozcas más de Spider Fleet.
+                                                            </p>
+                                                            <form class="form-lead" action="//mrare.us8.list-manage.com/subscribe/post?u=77142ece814d3cff52058a51f&amp;id=f300c9cce8" data-success="Gracias. Nos pondremos en contacto muy pronto" data-error="Por favor, completa toda la información">
+                                                                <input class="validate-required" type="text" name="NAME" placeholder="Nombre" />
+                                                                <input class="validate-required validate-email" name="EMAIL" type="email" placeholder="Email" />
+                                                                <input class="validate-required" type="tel" name="TELEFONO" placeholder="Telefono" />
+                                                                <input class="validate-required" type="text" name="NUMBER" placeholder="Numero de vehículos" />
+                                                                <div class="input-select">
+                                                                    <select>
+                                                                        <option selected="" value="Default">Selecciona el tipo de unidad que tengas</option>
+                                                                        <option value="Small">Transporte Utilitario</option>
+                                                                        <option value="Medium">Transporte Pesado</option>
+                                                                        <option value="Larger">Ambos</option>
+                                                                    </select>
+                                                                </div>
+                                                                <button type="submit" class="form-send btn btn--primary-3 type--uppercase" style="font-size:16px;color:white" onclick="Lead_Verde_goog_report_conversion()">Pide tu Prueba</button>
+                                                                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                                                                    <input class="form-send" type="text" name="b_77142ece814d3cff52058a51f_f300c9cce8" tabindex="-1" value="">
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--end of row-->
+                                            </div>
+                                            <!--end of container-->
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-5"> <img alt="Internet de las cosas en la gestion de flotas" src="img/itinerarios-min2.png"> </div>
+                </div>				
+            </div>
+        </section>
+    </header>
+    
+
+    <div class="main-container">
+           
+            <!-- <section class="text-center"> -->
+                <!-- <div class="container"> -->
+                    <!-- <div class="row"> -->
+                        <!-- <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2"> -->
+                            <!-- <h2>Controla tus vehículos de una manera 	Simple e Inteligente</h2> -->
+							
+                        <!-- </div> -->
+                    <!-- </div> -->
+                    <!-- <!--end of row--> 
+                <!-- </div> -->
+                <!-- <!--end of container--> 
+            <!-- </section> -->
+			
+            <section class="text-center border--bottom">
+                <div class="tabs-container" data-content-align="left">
+                    <ul class="tabs tabs--spaced">
+                        <li class="active">
+                            <div class="tab__title text-center">
+                                <i class="icon icon--sm block icon-Diploma-2"></i>
+                                <span class="h4">Conductas de manejo</span>
+                            </div>
+                            <div class="tab__content">
+                                <div class="container switchable switchable--switch">
+                                    <div class="row">
+                                        <div class="col-sm-7">
+                                            <img alt="Image" src="img/iphone_conductas.png" />
+                                        </div>
+                                        <div class="col-sm-5 col-md-4">
+                                            <div class="mt--1">
+                                                <h3>Alarga la vida de tus vehículos hasta en un <span class="sletra">50%</span> con buenas conductas de manejo</h3>
+                                                <p class="lead">
+                                                    Te ayudamos a analizar la conducta de manejo de tus choferes, podrás conocer ¿cómo?, ¿cuándo? y ¿dónde? conducen tus vehículos.
+                                                </p>
+                                                <hr class="short" />
+                                                <p>
+                                                    <!-- Evaluamos la magnitud de los frenones y arrancones, los excesos de velocidad, excesos de RPM y los movimientos bruscos de las unidades. -->
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end of row-->
+                                </div>
+                                <!--end of container-->
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tab__title text-center">
+                                <i class="icon icon--sm block icon-Fuel"></i>
+                                <span class="h4">Ahorra combustible</span>
+                            </div>
+                            <div class="tab__content">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm-7">
+                                            <img alt="Image" src="img/iphone_gas.png" />
+                                        </div>
+                                        <div class="col-sm-5 col-md-4">
+                                            <div class="mt--1">
+                                                <h3> Ahorra hasta un <span class="sletra">15%</span>  en el consumo de combustible</h3>
+                                                <p class="lead">
+                                                    Garantizando una buena conducción y planificación de rutas, puedes mejorar radicalmente tu rendimiento
+                                                </p>
+                                                <hr class="short" />
+                                                <p>
+                                                    <!-- Leemos el rendimiento real del vehículo directamente de la computadora de viaje. -->
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end of row-->
+                                </div>
+                                <!--end of container-->
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tab__title text-center">
+                                <i class="icon icon--sm block icon-Control"></i>
+                                <span class="h4">Mantenimiento</span>
+                            </div>
+                            <div class="tab__content">
+                                <div class="container switchable switchable--switch">
+                                    <div class="row">
+                                        <div class="col-sm-7">
+                                            <img alt="Image" src="img/ipad_mantto.png" />
+                                        </div>
+                                        <div class="col-sm-5 col-md-4">
+                                            <div class="mt--1">
+                                                <h3>Detecta fallas al momento y ahorra hasta un <span class="sletra">60%</span> en mantenimentos costosos.</h3>
+                                                <p class="lead">
+                                                    Te ayudamos a facilitar la tarea de tener tus vehículos siempre en el mejor estado.
+                                                </p>
+                                                <hr class="short" />
+                                                <p>
+                                                    <!-- Evaluamos la magnitud de los frenones y arrancones, los excesos de velocidad, excesos de RPM y los movimientos bruscos de las unidades. -->
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end of row-->
+                                </div>
+                                <!--end of container-->
+                            </div>
+                        </li>
+						<li>
+                            <div class="tab__title text-center">
+                                <i class="icon icon--sm block icon-Brain"></i>
+                                <span class="h4">Itinerarios Inteligentes</span>
+                            </div>
+                            <div class="tab__content">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm-7">
+                                            <img alt="Image" src="img/itinerarios-min.png" />
+                                        </div>
+                                        <div class="col-sm-5 col-md-4">
+                                            <div class="mt--1">
+                                                <h3> Aumenta tu productividad mejorando tus rutas.</h3>
+                                                <p class="lead">
+                                                    Te ayudamos con el análisis de tus zonas de trabajo, reconstruir históricos, analizar tiempos muertos y optimizar tus rutas.
+                                                </p>
+                                                <hr class="short" />
+                                                <p>
+                                                    <!-- Leemos el rendimiento real del vehículo directamente de la computadora de viaje. -->
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end of row-->
+                                </div>
+                                <!--end of container-->
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--end of tabs container-->
+            </section>
+		
+		<section class="border--bottom space--xxs">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <div class="modal-instance">
+                                <a class="btn btn--primary type--uppercase modal-trigger" href="#">
+                                    <span class="btn__text">
+                                        &#9654; Mira el video
+                                    </span>
+                                </a>
+                                <div class="modal-container">
+                                    <div class="modal-content bg-dark" data-width="60%" data-height="60%">
+                                        <iframe src="https://www.youtube.com/embed/k7A3mFHiMUE?autoplay=0" allowfullscreen="allowfullscreen"></iframe>
+                                    </div>
+                                    <!--end of modal-content-->
+                                </div>
+                                <!--end of modal-container-->
+                            </div>
+                            <!--end of modal instance-->
+                            <span class="block--xs h4 type--bold">y descubre el impacto de Spider Fleet en tu empresa</span>
+                        </div>
+                    </div>
+                    <!--end of row-->
+                </div>
+                <!--end of container-->
+        </section>
+		
+		
+		<section class="elements-title space--xxs text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2 class="type--uppercase">
+                            ¿ Que dicen nuestros clientes ?
+                        </h2>
+                    </div>
+                </div>
+                <!--end of row-->
+            </div>
+            <!--end of container-->
+        </section>
+		<div class="tab__content border--bottom">
+                            <section class=" ">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="slider slider--inline-arrows" data-arrows="true">
+                                                <ul class="slides">
+                                                    <li>
+                                                        <div class="row">
+                                                            <div class="testimonial">
+                                                                <div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-6 text-center">
+                                                                    <img class="testimonial__image" alt="Image" src="img/logo_Integra.png" />
+                                                                </div>
+                                                                <div class="col-md-7 col-md-offset-1 col-sm-8 col-xs-12">
+                                                                    <span class="h3">&ldquo;Gracias a Spider Fleet he podido automatizar el control de combustible ahorrando tiempo y recursos. Ahora mis choferes estan mas seguros y tengo un mejor tiempo de entrega a mis clientes&rdquo;
+                                                                    </span>
+                                                                    <h5>Leslie González</h5>
+                                                                    <span>Directora administrativa &mdash; INTEGRALUMINIO®</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!--end of row-->
+                                                    </li>
+                                                    <li>
+                                                        <div class="row">
+                                                            <div class="testimonial">
+                                                                <div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-6 text-center">
+                                                                    <img class="testimonial__image" alt="Image" src="img/logo_adecco.png" />
+                                                                </div>
+                                                                <div class="col-md-7 col-md-offset-1 col-sm-8 col-xs-12">
+                                                                    <span class="h3">&ldquo;Mejoramos la administración de nuestras unidades de reclutamiento de manera notable. Estamos mas tránquilos al saber que nuestra flotilla trabaja en las zonas y horarios adecuados. &rdquo;
+                                                                    </span>
+                                                                    <h5>Gilberto Mendoza</h5>
+                                                                    <span>Gerente de Compras &mdash; Adecco</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!--end of row-->
+                                                    </li>
+                                                    <li>
+                                                        <div class="row">
+                                                            <div class="testimonial">
+                                                                <div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-6 text-center">
+                                                                    <img class="testimonial__image" alt="Image" src="img/logo_agua.png" />
+                                                                </div>
+                                                                <div class="col-md-7 col-md-offset-1 col-sm-8 col-xs-12">
+                                                                    <span class="h3">&ldquo;El sistema es muy amigable e intuitivo para operarlo los reportes que se obtienen son según mis necesidades y en formato excel para trabajarlos. Nos ayuda en el tema de programación de mantenimientos preventivos para un control eficiente y traducido en ahorro&rdquo;
+                                                                    </span>
+                                                                    <h5>Victor Elizondo</h5>
+                                                                    <span>Proyectos Estratégicos &mdash; AGUA Y DRENAJE DE NUEVO LEON</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!--end of row-->
+                                                    </li>
+													<li>
+                                                        <div class="row">
+                                                            <div class="testimonial">
+                                                                <div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-6 text-center">
+                                                                    <img class="testimonial__image" alt="Image" src="img/logo_compas.png" />
+                                                                </div>
+                                                                <div class="col-md-7 col-md-offset-1 col-sm-8 col-xs-12">
+                                                                    <span class="h3">&ldquo; Con Spider Fleet tengo una herramienta esencial para evaluar el rendimiento de mis operadores y administrar el control de combustible de la empresa &rdquo;
+                                                                    </span>
+                                                                    <h5>Jesus Arizpe</h5>
+                                                                    <span>Director de Recursos Humanos &mdash; Grupo Compas</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!--end of row-->
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end of row-->
+                                </div>
+                                <!--end of container-->
+                            </section>
+                        </div>
+		
+		
+		
+		<!-- Encabezado quiero conocer tus encesidades -->
+		
+        <!-- <section class="text-center bg--secondary"> -->
+            <!-- <div class="container"> -->
+                <!-- <div class="row"> -->
+                    <!-- <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2"> -->
+                        <!-- <h2>¿Qué ganas con SPIDER FLEET?</h2> -->
+                        <!-- <p class="lead"> -->
+                            <!-- Te ayudamos a mejorar las conductas de manejo</p> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+                <!-- <!--end of row--> 
+            <!-- </div> -->
+            <!-- <!--end of container--> 
+        <!-- </section> -->
+		
+		
+		<!-- caracteristicas simples -->
+		
+        <!-- <section class="bg--secondary"> -->
+            <!-- <div class="container"> -->
+                <!-- <div class="row"> -->
+                    <!-- <div class="col-sm-4"> -->
+                        <!-- <div class="feature feature-2 boxed boxed--border"> -->
+                            <!-- <i class="icon icon-Plug-In color--primary"></i> -->
+                            <!-- <div class="feature__body" > -->
+                                <!-- <p> -->
+                                    <!-- Sin instalaciones complicadas, olvidate de perdidas de garantía en tus unidades -->
+                                <!-- </p> -->
+                            <!-- </div> -->
+                        <!-- </div> -->
+                        <!-- <!--end feature-->
+                    <!-- </div> -->
+                    <!-- <div class="col-sm-4"> -->
+                        <!-- <div class="feature feature-2 boxed boxed--border"> -->
+                            <!-- <i class="icon icon-Medal color--primary"></i> -->
+                            <!-- <div class="feature__body"> -->
+                                <!-- <p> -->
+                                    <!-- Ayudamos a tus choferes a conducir mejor y cuidar la integridad de tus unidades. Evita accidentes! -->
+                                <!-- </p> -->
+                            <!-- </div> -->
+                        <!-- </div> -->
+                        <!-- <!--end feature-->
+                    <!-- </div> -->
+                    <!-- <div class="col-sm-4"> -->
+                        <!-- <div class="feature feature-2 boxed boxed--border"> -->
+                            <!-- <i class="icon icon-Cloud-Computer color--primary"></i> -->
+                            <!-- <div class="feature__body"> -->
+                                <!-- <p> -->
+                                    <!-- Solo necesitas un navegador Web y estarás siempre conectado con tu flotilla -->
+                                <!-- </p> -->
+                            <!-- </div> -->
+                        <!-- </div> -->
+                        <!-- <!--end feature-->
+                    <!-- </div> -->
+                    <!-- <div class="col-sm-4"> -->
+                        <!-- <div class="feature feature-2 boxed boxed--border"> -->
+                            <!-- <i class="icon icon-Like color--primary"></i> -->
+                            <!-- <div class="feature__body"> -->
+                                <!-- <p> -->
+                                    <!-- Interfaz clara y amigable. Te ofrecemos solo la información que necesitas sin complicaciones -->
+                                <!-- </p> -->
+                            <!-- </div> -->
+                        <!-- </div> -->
+                        <!-- <!--end feature-->
+                    <!-- </div> -->
+                    <!-- <div class="col-sm-4"> -->
+                        <!-- <div class="feature feature-2 boxed boxed--border"> -->
+                            <!-- <i class="icon icon-Wrench color--primary"></i> -->
+                            <!-- <div class="feature__body"> -->
+                                <!-- <p> -->
+                                    <!-- Te avisamos de fallas detectadas al momento y fomentamos un mantenimiento preventivo -->
+                                <!-- </p> -->
+                            <!-- </div> -->
+                        <!-- </div> -->
+                        <!-- <!--end feature--> 
+                    <!-- </div> -->
+                    <!-- <div class="col-sm-4"> -->
+                        <!-- <div class="feature feature-2 boxed boxed--border"> -->
+                            <!-- <i class="icon icon-Dollar-Sign color--primary"></i> -->
+                            <!-- <div class="feature__body"> -->
+                                <!-- <p> -->
+                                    <!-- Mejorando el rendimiento ahorra hasta un 15% en consumo de combustible! -->
+                                <!-- </p> -->
+                            <!-- </div> -->
+                        <!-- </div> -->
+                        <!-- <!--end feature--> 
+                    <!-- </div> -->
+                <!-- </div> -->
+                <!-- <!--end of row--> 
+            <!-- </div> -->
+            <!-- <!--end of container--> 
+        <!-- </section> -->
+		
+		
+		<!-- VIDEO -->
+		
+        <!-- <section class="switchable feature-large bg--primary"> -->
+            <!-- <div class="container"> -->
+                <!-- <div class="row"> -->
+                    <!-- <div class="col-sm-6 col-xs-12"> -->
+                        <!-- <div class="video-cover border--round box-shadow-wide"> -->
+                            <!-- <div class="background-image-holder"> -->
+                                <!-- <img alt="Administracion de flotas Spider Fleet" src="" /> -->
+                            <!-- </div> -->
+                            <!-- <div class="video-play-icon"></div> -->
+                            <!-- <iframe src="https://www.youtube.com/embed/k7A3mFHiMUE?autoplay=1" allowfullscreen="allowfullscreen"></iframe> -->
+                        <!-- </div> -->
+                        <!-- <!--end video cover-->
+                    <!-- </div> -->
+                    <!-- <div class="col-sm-6 col-md-5"> -->
+                        <!-- <div class="mt--2"> -->
+                            <!-- <h2>La solución perfecta para simplificar tu trabajo</h2> -->
+                            <!-- <p class="lead"> -->
+                               <!-- Sabemos el reto que implica controlar todos los aspectos de tu flota vehicular &mdash; Spider Fleet es tu asistente inteligente para que puedas enfocarte en los problemas mas urgentes. -->
+                            <!-- </p> -->
+                        <!-- </div> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+                <!-- <!--end of row--> 
+            <!-- </div> -->
+            <!-- <!--end of container--> 
+        <!-- </section> -->
+       
+	   
+	   <!-- NOVA PARTES -->
+	   
+	   
+	   
+		<section class="border--bottom space--xxs">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <div class="modal-instance block">
+                                <a class="col-sm-5 btn btn--primary type--uppercase modal-trigger" onclick="Prospecto_rojo_goog_report_conversion()">
+                                    <span class="btn__text" style="font-size:16px">
+                                        Quiero saber más
+                                    </span>
+                                    <!--onclick="record_prospecto()"-->
+                                </a>
+                                <div id="modal_contacto" class="modal-container">
+                                    <div class="modal-content">
+                                        <section class="unpad ">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-sm-3 mb--1">
+                                                        <div class="modal-instance block">
+                                                            <a class="btn modal-trigger" href="#">
+                                                                <span class="btn__text">
+
+                                                                </span>
+                                                            </a>
+                                                            <div class="modal-container">
+                                                                <div class="modal-content">
+                                                                    <section class="imageblock feature-large bg--site border--round ">
+                                                                        <div class="imageblock__content col-md-5 col-sm-4 pos-left">
+                                                                            <div class="background-image-holder">
+                                                                                <img alt="image" src="img/mini_Spidy.jpg" />
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="container">
+                                                                            <div class="row">
+                                                                                <div class="col-md-5 col-md-push-6 col-sm-6 col-sm-push-4">
+                                                                                    <h2>Conoce más sobre Spider Fleet</h2>
+                                                                                    <p>
+                                                                                        Compartenos tu información, y nos pondremos en contacto contigo.
+                                                                                    </p>
+                                                                                    <form class="form-lead" action="//mrare.us8.list-manage.com/subscribe/post?u=77142ece814d3cff52058a51f&amp;id=f300c9cce8" data-success="Gracias. Nos pondremos en contacto muy pronto" data-error="Por favor, completa toda la información">
+                                                                                        <input class="validate-required" type="text" name="NAME" placeholder="Nombre" />
+                                                                                        <input class="validate-required validate-email" name="EMAIL" type="email" placeholder="Email" />
+                                                                                        <input class="validate-required" type="tel" name="TELEFONO" placeholder="Telefono" />
+
+                                                                                        <button type="submit" class="form-send btn btn--primary type--uppercase" style="font-size:16px" onclick="Lead_Rojo_goog_report_conversion()">Quiero saber más</button>
+                                                                                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                                                                                            <input class="form-send" type="text" name="b_77142ece814d3cff52058a51f_f300c9cce8" tabindex="-1" value="">
+                                                                                        </div>
+                                                                                    </form>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--end of row-->
+                                                                        </div>
+                                                                        <!--end of container-->
+                                                                    </section>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!--end of modal instance-->
+                                                    </div>
+                                                </div>
+                                                <!--end of row-->
+                                            </div>
+                                            <!--end of container-->
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-1">
+                                <span>
+
+                                </span>
+                            </div>
+                            <!--boton 2 VERDE-->
+                            <div class="modal-instance block">
+                                <a class="col-sm-6 btn btn--primary-3 type--uppercase modal-trigger" onclick="Prospecto_verde_goog_report_conversion()">
+                                    <span class="btn__text" style="font-size:16px">
+                                        Quiero mi DEMO
+                                    </span>
+                                    <!--onclick="record_prospecto()"-->
+                                </a>
+                                <div id="modal_contacto" class="modal-container">
+                                    <div class="modal-content">
+                                        <section class="unpad ">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-sm-3 mb--1">
+                                                        <div class="modal-instance block">
+                                                            <a class="btn modal-trigger" href="#">
+                                                                <span class="btn__text">
+
+                                                                </span>
+                                                            </a>
+                                                            <div class="modal-container">
+                                                                <div class="modal-content">
+                                                                    <section class="imageblock feature-large bg--site border--round ">
+                                                                        <div class="imageblock__content col-md-5 col-sm-4 pos-left">
+                                                                            <div class="background-image-holder">
+                                                                                <img alt="image" src="img/mini_SpidyReloaded.jpg" />
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="container">
+                                                                            <div class="row">
+                                                                                <div class="col-md-5 col-md-push-6 col-sm-6 col-sm-push-4">
+                                                                                    <h2>Pide tu prueba GRATIS</h2>
+                                                                                    <p>
+                                                                                        Agendaremos una llamada o visita, para que conozcas más de Spider Fleet.
+                                                                                    </p>
+                                                                                    <form class="form-lead" action="//mrare.us8.list-manage.com/subscribe/post?u=77142ece814d3cff52058a51f&amp;id=f300c9cce8" data-success="Gracias. Nos pondremos en contacto muy pronto" data-error="Por favor, completa toda la información">
+                                                                                        <input class="validate-required" type="text" name="NAME" placeholder="Nombre" />
+                                                                                        <input class="validate-required validate-email" name="EMAIL" type="email" placeholder="Email" />
+                                                                                        <input class="validate-required" type="tel" name="TELEFONO" placeholder="Telefono" />
+                                                                                        <input class="validate-required" type="text" name="NUMBER" placeholder="Numero de vehículos" />
+                                                                                        <div class="input-select">
+                                                                                            <select>
+                                                                                                <option selected="" value="Default">Selecciona el tipo de unidad que tengas</option>
+                                                                                                <option value="Small">Transporte Utilitario</option>
+                                                                                                <option value="Medium">Transporte Pesado</option>
+                                                                                                <option value="Larger">Ambos</option>
+                                                                                            </select>
+                                                                                        </div>
+                                                                                        <button type="submit" class="form-send btn btn--primary-3 type--uppercase" style="font-size:16px" onclick="Lead_Verde_goog_report_conversion()">Pide tu Prueba</button>
+                                                                                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                                                                                            <input class="form-send" type="text" name="b_77142ece814d3cff52058a51f_f300c9cce8" tabindex="-1" value="">
+                                                                                        </div>
+                                                                                    </form>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--end of row-->
+                                                                        </div>
+                                                                        <!--end of container-->
+                                                                    </section>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!--end of modal instance-->
+                                                    </div>
+                                                </div>
+                                                <!--end of row-->
+                                            </div>
+                                            <!--end of container-->
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--end of row-->
+                </div>
+                <!--end of container-->
+        </section>
+		
+		<section class="text-center">
+            <div class="container">
+				<div class="col-sm-12">
+                    <h3 class="">
+                        ¿Qué dicen las noticias?
+                    </h3>
+                </div>
+                <div class="row sobre1">					
+                    <div class="col-sm-2 sobre1">
+                            <a href="http://www.forbes.com.mx/las-12-startups-que-apuestan-por-la-revolucion-emprendedora-en-mexico/#gs.Tk3V7Gc">
+                                <img alt="Forbes" class="border--round" src="img/forbes_min.png" height="50" />
+                            </a>
+                    </div>
+					<div class="col-sm-3">
+                            <a href="http://www.milenio.com/negocios/startup_studio_monterrey-levantamiento_capital_play_business-milenio_noticias_0_831516926.html?utm_source=Twitter&utm_medium=Referral&utm_term=Negocios&utm_content=Enterate&utm_campaign=MilenioMty">
+                                <img alt="Milenio" class="border--round" src="img/milenio_diario.png" height="50" />
+                            </a>
+                    </div>
+					<div class="col-sm-4">
+                            <a href="http://elempresario.mx/emprendedores/spider-fleet-tecnologia-se-pone-al-volante">
+                                <img alt="El Economista" class="border--round" src="img/logo_eleconomista.png" height="50" />
+                            </a>
+                    </div>
+					<div class="col-sm-2">
+                            <a href="http://tecreview.itesm.mx/500-startups-presenta-a-los-integrantes-del-batch-007-de-seed/#undefined.gbpl">
+                                <img alt="Tec Review" class="border--round" src="img/tecreview.png" height="50"/>
+                            </a>
+                    </div>
+                </div>
+                <!--end of row-->
+            </div>
+            <!--end of container-->
+        </section>
+		 
+		
+		
+		<!-- casos de exito -->
+		
+		
+		
+        <!-- <section class="text-center bg--dark"> -->
+            <!-- <div class="container"> -->
+                <!-- <div class="row"> -->
+                    <!-- <div class="col-md-8 col-sm-10"> -->
+                        <!-- <div class="slider" data-paging="true"> -->
+                            <!-- <ul class="slides"> -->
+                                <!-- <li> -->
+                                    <!-- <div class="testimonial"> -->
+                                        <!-- <blockquote> -->
+                                            <!-- &ldquo;Gracias a Spider Fleet he podido automatizar el control de combustible ahorrando tiempo y recursos. Ahora mis choferes estan mas seguros y tengo un mejor tiempo de entrega a mis clientes&rdquo; -->
+                                        <!-- </blockquote> -->
+                                        <!-- <h5>Leslie González</h5> -->
+                                        <!-- <span> Directora administrativa &mdash; INTEGRALUMINIO®</span> -->
+                                    <!-- </div> -->
+                                <!-- </li> -->
+                                <!-- <li> -->
+                                    <!-- <div class="testimonial"> -->
+                                        <!-- <blockquote> -->
+                                            <!-- &ldquo;El sistema es muy amigable e intuitivo para operarlo los reportes que se obtienen son según mis necesidades y en formato excel para trabajarlos. Nos ayuda en el tema de programación de mantenimientos preventivos para un control eficiente y traducido en ahorro&rdquo; -->
+                                        <!-- </blockquote> -->
+                                        <!-- <h5>Victor Elizondo</h5> -->
+                                        <!-- <span>Proyectos Estratégicos &mdash; AGUA Y DRENAJE DE NUEVO LEON</span> -->
+                                    <!-- </div> -->
+                                <!-- </li> -->
+                                <!-- <li> -->
+                                    <!-- <div class="testimonial"> -->
+                                        <!-- <blockquote> -->
+                                            <!-- &ldquo;Mejoramos la administración de nuestras unidades de reclutamiento de manera notable. Estamos mas tránquilos al saber que nuestra flotilla trabaja en las zonas y horarios adecuados. &rdquo; -->
+                                        <!-- </blockquote> -->
+                                        <!-- <h5>Gilberto Mendoza</h5> -->
+                                        <!-- <span> Gerente de Compras &mdash; Adecco</span> -->
+                                    <!-- </div> -->
+                                <!-- </li> -->
+                                <!-- <li> -->
+                                    <!-- <div class="testimonial"> -->
+                                        <!-- <blockquote> -->
+                                            <!-- &ldquo; Con Spider Fleet tengo una herramienta esencial para evaluar el rendimiento de mis operadores y administrar el control de combustible de la empresa &rdquo; -->
+                                        <!-- </blockquote> -->
+                                        <!-- <h5>Jesus Arizpe</h5> -->
+                                        <!-- <span> Director de Recursos Humanos &mdash; Grupo Compas</span> -->
+                                    <!-- </div> -->
+                                <!-- </li> -->
+                            <!-- </ul> -->
+                        <!-- </div> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+                <!-- <!--end of row--> 
+            <!-- </div> -->
+            <!-- <!--end of container--> 
+        <!-- </section>		 -->
+		
+		
+		
+		
+        <!-- <section class="text-center space--xxs"> -->
+            <!-- <div class="container"> -->
+                <!-- <div class="row"> -->
+                    <!-- <!--<div class="slider" data-paging="true">--> 
+                        <!-- <!--<ul class="slides">--> 
+                            <!-- <li class="col-sm-4 col-xs-12"> -->
+                                <!-- <div class="project-thumb"> -->
+                                    <!-- <a href="http://www.forbes.com.mx/las-12-startups-que-apuestan-por-la-revolucion-emprendedora-en-mexico/#gs.Tk3V7Gc"> -->
+                                        <!-- <img alt="Forbes" class="border--round" src="img/forbes_min.png" /> -->
+                                    <!-- </a> -->
+                                <!-- </div> -->
+                            <!-- </li> -->
+                            <!-- <li class="col-sm-4 col-xs-12"> -->
+                                <!-- <div class="project-thumb"> -->
+                                    <!-- <a href="http://www.milenio.com/negocios/startup_studio_monterrey-levantamiento_capital_play_business-milenio_noticias_0_831516926.html?utm_source=Twitter&utm_medium=Referral&utm_term=Negocios&utm_content=Enterate&utm_campaign=MilenioMty"> -->
+                                        <!-- <img alt="Milenio" class="border--round" src="img/milenio_diario.png" /> -->
+                                    <!-- </a> -->
+                                <!-- </div> -->
+                            <!-- </li> -->
+                            <!-- <li class="col-sm-4 col-xs-12"> -->
+                                <!-- <div class="project-thumb"> -->
+                                    <!-- <a href="http://elempresario.mx/emprendedores/spider-fleet-tecnologia-se-pone-al-volante"> -->
+                                        <!-- <img alt="El Economista" class="border--round" src="img/logo_eleconomista.png" /> -->
+                                    <!-- </a> -->
+                                <!-- </div> -->
+                            <!-- </li> -->
+                            <!-- <li class="col-sm-4 col-xs-12"> -->
+                                <!-- <div class="project-thumb"> -->
+                                    <!-- <a href="http://tecreview.itesm.mx/500-startups-presenta-a-los-integrantes-del-batch-007-de-seed/#undefined.gbpl"> -->
+                                        <!-- <img alt="Tec Review" class="border--round" src="img/tecreview.png" /> -->
+                                    <!-- </a> -->
+                                <!-- </div> -->
+                            <!-- </li> -->
+                        <!-- <!-- </ul> --> 
+                    <!-- <!--</div>--> 
+                <!-- </div> -->
+                <!-- <!--end row--> 
+            <!-- </div> -->
+            <!-- <!--end of container--> 
+        <!-- </section> -->
+
+        <footer class="space--sm footer-1 text-center-xs ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <img class="logo logo-dark" alt="logo" src="img/8.png" />
+                        <span class="type--fine-print">
+                            &copy;
+                            <span class="update-year"></span> Spider Fleet
+                        </span>
+                        <a class="type--fine-print" href="privacidad/index.html">Aviso de privacidad</a>
+                    </div>
+                    <div class="col-sm-6 text-right text-center-xs">
+                        <ul class="social-list list-inline list--hover">
+                            <li>
+                                <a href="https://twitter.com/SpiderFleet">
+                                    <i class="socicon socicon-twitter icon icon--xs"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/SpiderFleetManagement/">
+                                    <i class="socicon socicon-facebook icon icon--xs"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <a class="btn btn--primary type--uppercase" href="contacto/index.html">
+                            <span class="btn__text">
+                                Contacto
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <!--end of row-->
+            </div>
+            <!--end of container-->
+        </footer>
+
+    </div>
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/typed.min.js"></script>
+
+    <script src="js/flickity.min.js"></script>
+    <script src="js/easypiechart.min.js"></script>
+    <script src="js/datepicker.js"></script>
+    <script src="js/isotope.min.js"></script>
+    <script src="js/ytplayer.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
+    <script src="js/granim.min.js"></script>
+    <script src="js/jquery.steps.min.js"></script>
+    <script src="js/countdown.min.js"></script>
+    <script src="js/twitterfetcher.min.js"></script>
+    <script src="js/spectragram.min.js"></script>
+    <!-- Google Code for Prospecto Conversion Page
+    In your html page, add the snippet and call
+    goog_report_conversion when someone clicks on the
+    chosen link or button. -->
+    <script type="text/javascript">
+      /* <![CDATA[ */
+        Prospecto_rojo_goog_snippet_vars = function () {
+        var w = window;
+        w.google_conversion_id = 853552191;
+        w.google_conversion_label = "sgaYCJzBqXEQv9iAlwM";
+        w.google_remarketing_only = false;
+        }
+
+        Lead_Rojo_goog_snippet_vars = function () {
+          var w = window;
+          w.google_conversion_id = 853552191;
+          w.google_conversion_label = "h9MVCIK7sXEQv9iAlwM";
+          w.google_remarketing_only = false;
+        }
+
+        Prospecto_verde_goog_snippet_vars = function () {
+            var w = window;
+            w.google_conversion_id = 853552191;
+            w.google_conversion_label = "gzDxCKCO13EQv9iAlwM";
+            w.google_remarketing_only = false;
+        }
+
+        Lead_Verde_goog_snippet_vars = function () {
+            var w = window;
+            w.google_conversion_id = 853552191;
+            w.google_conversion_label = "7RuHCObw6HEQv9iAlwM";
+            w.google_remarketing_only = false;
+        }
+
+      // DO NOT CHANGE THE CODE BELOW.
+      Prospecto_rojo_goog_report_conversion = function () {
+        Prospecto_rojo_goog_snippet_vars();
+        window.google_conversion_format = "3";
+        var opt = new Object();
+        opt.onload_callback = function() {
+        //if (typeof(url) != 'undefined') {
+        //  window.location = url;
+        //}
+      }
+      var conv_handler = window['google_trackConversion'];
+      if (typeof(conv_handler) == 'function') {
+        conv_handler(opt);
+      }
+      }
+
+      Lead_Rojo_goog_report_conversion = function () {
+          Lead_Rojo_goog_snippet_vars();
+          window.google_conversion_format = "3";
+          var opt = new Object();
+          opt.onload_callback = function () {
+              if (typeof (url) != 'undefined') {
+                  window.location = url;
+              }
+          }
+          var conv_handler = window['google_trackConversion'];
+          if (typeof (conv_handler) == 'function') {
+              conv_handler(opt);
+          }
+      }
+
+
+      Prospecto_verde_goog_report_conversion = function () {
+          Prospecto_verde_goog_snippet_vars();
+          window.google_conversion_format = "3";
+          var opt = new Object();
+          opt.onload_callback = function () {
+              if (typeof (url) != 'undefined') {
+                  window.location = url;
+              }
+          }
+          var conv_handler = window['google_trackConversion'];
+          if (typeof (conv_handler) == 'function') {
+              conv_handler(opt);
+          }
+      }
+
+      Lead_Verde_goog_report_conversion = function () {
+          Lead_Verde_goog_snippet_vars();
+          window.google_conversion_format = "3";
+          var opt = new Object();
+          opt.onload_callback = function () {
+              if (typeof (url) != 'undefined') {
+                  window.location = url;
+              }
+          }
+          var conv_handler = window['google_trackConversion'];
+          if (typeof (conv_handler) == 'function') {
+              conv_handler(opt);
+          }
+      }
+
+
+    /* ]]> */
+    </script>
+    <script type="text/javascript"
+            src="//www.googleadservices.com/pagead/conversion_async.js">
+    </script>
+
+</body>
+
+</html>

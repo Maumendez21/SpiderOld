@@ -1,0 +1,275 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Spider Fleet - Control de flotas vehiculares</title>
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site Description Here">
+    <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../css/stack-interface.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../css/socicon.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../css/lightbox.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../css/flickity.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../css/iconsmind.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../css/jquery.steps.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../css/theme-red.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../css/custom.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../css/font-rubiklato.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700%7CRubik:300,400,500" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Hotjar Tracking Code for www.spider.com.mx -->
+    <script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:514170,hjsv:5};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+
+</head>
+<body data-smooth-scroll-offset="77">
+    <section class="bar bar-3 bar--sm bg--secondary">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="bar__module">
+                        <span class="type--fade">Spider Fleet | Sistema de Control de Flotillas Vehiculares</span>
+                    </div>
+                </div>
+                <div class="col-md-6 text-right text-left-xs text-left-sm">
+                    <div class="bar__module">
+                        <ul class="menu-horizontal">
+                            <li>
+                                <div class="modal-instance">
+                                    <a href="http://spiderfleetbetasystem.azurewebsites.net">Ir al sistema</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--end of row-->
+        </div>
+        <!--end of container-->
+    </section>
+
+
+    <div class="nav-container ">
+        <div class="bar bar--sm visible-xs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-3 col-sm-2">
+                        <a href="../index.html">
+                            <img class="logo logo-dark" alt="logo" src="../img/8.png" />
+                            <img class="logo logo-light" alt="logo" src="../img/8.png" />
+                        </a>
+                    </div>
+                    <div class="col-xs-9 col-sm-10 text-right">
+                        <a href="#" class="hamburger-toggle" data-toggle-class="#menu1;hidden-xs">
+                            <i class="icon icon--sm stack-interface stack-menu"></i>
+                        </a>
+                    </div>
+                </div>
+                <!--end of row-->
+            </div>
+            <!--end of container-->
+        </div>
+        <!--end bar-->
+        <nav id="menu1" class="bar bar--sm bar-1 hidden-xs ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-1 col-sm-2 hidden-xs">
+                        <div class="bar__module">
+                            <a href="../index.html">
+                                <img class="logo logo-dark" alt="logo" src="../img/8.png"/>
+                                <img class="logo logo-light" alt="logo" src="../img/8.png" />
+                            </a>
+                        </div>
+                        <!--end module-->
+                    </div>
+                    <div class="col-md-11 col-sm-12 text-right text-left-xs text-left-sm">
+                        <div class="bar__module">
+                            <ul class="menu-horizontal text-left">
+                                <li>
+                                    <a href="index.html">Caracter&#237sticas</a>
+                                    <!--end dropdown container-->
+                                </li>
+                                <li>
+                                    <a href="../blog/index.html">Blog</a>
+                                    <!--end dropdown container-->
+                                </li>
+                                <li>
+                                    <a href="../contacto/index.html">Contacto</a>
+                                    <!--end dropdown container-->
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--end of row-->
+            </div>
+            <!--end of container-->
+        </nav>
+        <!--end bar-->
+    </div>
+
+    <div class="main-container">
+        <section class="switchable feature-large feature-large-13 bg--secondary">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <img alt="Image" class="border--round box-shadow-wide" src="../img/iphones-min.png" />
+                    </div>
+                    <div class="col-sm-6 col-md-5">
+                        <div class="switchable__text">
+                            <h2>Analisis de conductas de manejo</h2>
+                            <p class="lead">
+                                Nuestra tecnología nos permite registrar a detalle eventos de manejo relevantes en tu vehiculo
+                            </p>
+                            <div class="text-block">
+                                <ul class="fa-ul">
+                                    <li><i class="fa-li fa fa-circle"></i><strong>Excesos de velocidad</strong></li>
+                                    <li><i class="fa-li fa fa-circle"></i><strong>Arrancones</strong></li>
+                                    <li><i class="fa-li fa fa-circle"></i><strong>Movimientos bruscos</strong></li>
+                                    <li><i class="fa-li fa fa-circle"></i><strong>Enfrenones</strong></li>
+                                    <li><i class="fa-li fa fa-circle"></i><strong>Revoluciones excesivas</strong></li>
+                                </ul>
+                            </div>
+                            <div class="text-block">
+                                <p>
+                                    En mediano y largo plazo, estos comportamientos terminan por pasar factura y reducen la vida útil de tus vehiculos hasta en un 50%.
+                                </p>
+                            </div>
+                            <div class="text-block">
+                                <p>
+                                    Con <strong>Spider Fleet</strong> tendrás una clasificación de tus choferes que te permitira saber de manera simple y rápida las areas de oportunidad a corregir, asi como analizamos patrones de mala conducta recurrentes al fin de evitarlos. Puedes crear una nueva cultura de trabajo, la información es transparente a tus choferes y tendrán una herramienta para fomentar una mejora continua.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end of row-->
+            </div>
+            <!--end of container-->
+        </section>
+
+        <section class="switchable feature-large feature-large-13 bg--dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <img alt="Image" class="border--round box-shadow-wide" src="../img/ipad_combustible-min.png" />
+                    </div>
+                    <div class="col-sm-6 col-md-5">
+                        <div class="switchable__text">
+                            <h2>Optimización de combustible</h2>
+                            <p class="lead">
+                                Saber con precisión cuanto consumimos en combustible es primordial para optimizar costos. El rendimiento promedio varia mucho dependiendo de las conductas de manejo, tipo de vialidad, con carga o sin carga, y muchos otros factores ambientales.
+                            </p>
+                            <div class="text-block">
+                                <p>
+                                    Ofrecemos un análisis del consumo con base en el rendimiento real proporcionado por la computadora a bordo de los vehiculos. De esta manera, tendrás una mayor precisión del consumo exacto y podrás planificar tus costos.
+                                </p>
+                            </div>
+                            <div class="text-block">
+                                <p>
+                                    Buenos hábitos de manejo pueden ahorrarte hasta 15% en el consumo, además con Spider Fleet podrás detectar de manera indirecta ordeñas o despachos injustos de combustible.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end of row-->
+            </div>
+            <!--end of container-->
+        </section>
+
+        <section class="switchable feature-large feature-large-13 bg--secondary">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <img alt="Image" class="border--round box-shadow-wide" src="../img/itinerarios-min.png" />
+                    </div>
+                    <div class="col-sm-6 col-md-5">
+                        <div class="switchable__text">
+                            <h2>Itinerarios inteligentes</h2>
+                            <p class="lead">
+                                La Geo-Localización es la necesidad básica de cualquier flotilla de vehiculos. Con <strong>Spider Fleet</strong> cuentas con un GPS de alta precisión el cual brinda las prestaciones tradicionales como <strong>Geocercas</strong>, <strong>Historico de rutas</strong>, <strong>Mapas de calor</strong> y <strong>Ubicación en tiempo real</strong>.
+                            </p>
+                            <div class="text-block">
+                                <p>
+                                    Adicionalmente nuestro valor agregado es no solo responder a la pregunta <strong>"¿Donde están mis vehículos?"</strong>, sino también respondemos el <strong>¿Como los manejan?</strong> y <strong>¿Cuanto consumen?</strong>. Todo a través de una interfaz sencilla y amigable que permitira estar en permanente contacto con tu flotilla.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end of row-->
+            </div>
+            <!--end of container-->
+        </section>
+
+        <footer class="space--sm footer-1 text-center-xs ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <img class="logo logo-dark" alt="logo" src="../img/8.png" />
+                        <span class="type--fine-print">
+                            &copy;
+                            <span class="update-year"></span> Spider Fleet
+                        </span>
+                        <a class="type--fine-print" href="#">Aviso de privacidad</a>
+                    </div>
+                    <div class="col-sm-6 text-right text-center-xs">
+                        <ul class="social-list list-inline list--hover">
+                            <li>
+                                <a href="https://twitter.com/SpiderFleet">
+                                    <i class="socicon socicon-twitter icon icon--xs"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/SpiderFleetManagement/">
+                                    <i class="socicon socicon-facebook icon icon--xs"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <a class="btn btn--primary type--uppercase modal-trigger" href="#modal_contacto">
+                            <span class="btn__text">
+                                Contacto
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <!--end of row-->
+            </div>
+            <!--end of container-->
+        </footer>
+    </div>
+        
+
+
+        <script src="../js/jquery-3.1.1.min.js"></script>
+        <script src="../js/parallax.js"></script>
+        <script src="../js/smooth-scroll.min.js"></script>
+        <script src="../js/scripts.js"></script>
+        <script src="../js/typed.min.js"></script>
+
+        <script src="../js/flickity.min.js"></script>
+        <script src="../js/easypiechart.min.js"></script>
+        <script src="../js/datepicker.js"></script>
+        <script src="../js/isotope.min.js"></script>
+        <script src="../js/ytplayer.min.js"></script>
+        <script src="../js/lightbox.min.js"></script>
+        <script src="../js/granim.min.js"></script>
+        <script src="../js/jquery.steps.min.js"></script>
+        <script src="../js/countdown.min.js"></script>
+        <script src="../js/twitterfetcher.min.js"></script>
+        <script src="../js/spectragram.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Spider Fleet, tu Flotilla Inteligente</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Spider Fleet te ayuda a controlar tu flotilla de forma fácil y eficiente">
+        <link rel="icon" href="img/spider.ico">
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"/>
+        <link href="css/theme.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/theme-red.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/spider.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body>
+        <a id="start"></a>
+        <!-- Header superior -->
+        <div class="nav-container">
+            <!-- Menu Smartphone -->
+            <div class="bar bar-sm visible-xs">
+                <div class="container">
+                    <div class="row">
+                        <!-- Logo -->
+                        <div class="col-3 col-md-2">
+                            <a href="index.html">
+                                <img class="logo" alt="logo" src="img/logospider.png"/>
+                            </a>
+                        </div>
+                        <!-- Menu -->
+                        <div class="col-9 col-md-10 text-right">
+                            <a href="#" class="hamburger-toggle" data-toggle-class="#menu;hidden-xs">
+                                <i class="material-icons">menu</i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Menu Normal -->
+            <div id="menu" class="bar bar--sm bar-1 hidden-xs">
+                <div class="container">
+                    <div class="row">
+                        <!-- Logo -->
+                        <div class="col-lg-1 col-md-2 hidden-xs">
+                            <div class="bar__module">
+                                <a href="index.html">
+                                    <img class="logo" alt="logo" src="img/logospider.png"/>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-11 col-md-12 text-right text-left-xs text-left-sm">
+                            <!-- Menu -->
+                            <div class="bar__module">
+                                <ul class="menu-horizontal text-left">
+                                    <li><a href="#">Características</a></li>
+                                    <li><a href="#">Precios</a></li>
+                                    <li><a href="./faq/">Preguntas Frecuentes</a></li>
+                                    <li><a href="#">Contacto</a></li>
+                                </ul>
+                            </div>
+                            <!-- Botones -->
+                            <div class="bar__module">
+                                <a class="btn btn--sm type--uppercase" href="./account/login/">
+                                    <span class="btn__text">
+                                        Iniciar Sesión
+                                    </span>
+                                </a>
+                                <a class="btn btn--sm btn--primary type--uppercase" href="./account/register/">
+                                    <span class="btn__text">
+                                        Registrarse
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contenido -->
+        <div class="main-container">
+            <!-- Portada -->
+            <section>
+                <div class="container">
+                    <div class="row align-items-center justify-content-around">
+                        <div class="col-md-6 col-lg-5">
+                            <h1>Tu flotilla vehicular en la nube</h1>
+                            <p class="lead">Toma el control de forma fácil y eficaz en minutos.</p>
+                            <a class="btn btn--primary type--uppercase" href="#">
+                                <span class="btn__text">Crea tu cuenta</span>
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <img alt="Image" src="img/crypto-1.svg" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Explicacion -->
+            <section class="text-center bg--secondary">
+                <div class="container">
+                    <div class="row justify-content-around">
+                        <div class="col-md-10 col-lg-8">
+                            <h2>Toma ventaja de las nuevas tecnologías.</h2>
+                            <p class="lead">En solo tres pasos puedes conectarte a tus unidades.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Explicacion -->
+            <section class="switchable bg--secondary">
+                <div class="container">
+                    <div class="row justify-content-around">
+                        <div class="col-md-6 text-center">
+                            <div class="video-cover border--round box-shadow-wide">
+                                <div class="background-image-holder"><img alt="image" src="img/recruitment-4.jpg" /></div>
+                                <div class="video-play-icon"></div>
+                                <iframe data-src="https://www.youtube.com/embed/6p45ooZOOPo?autoplay=1" allowfullscreen="allowfullscreen"></iframe>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-5">
+                            <ol class="process-3">
+                                <li class="process_item">
+                                    <div class="process__number"><span>1</span></div>
+                                    <div class="process__body">
+                                        <h4>Crea tu cuenta</h4>
+                                        <p>Solo necesitas tu Email</p>
+                                    </div>
+                                </li>
+                                <li class="process_item">
+                                    <div class="process__number"><span>2</span></div>
+                                    <div class="process__body">
+                                        <h4>Descarga una app</h4>
+                                        <p>Con Spider Tag, asigna un smarphone como sensor inteligente.</p>
+                                    </div>
+                                </li>
+                                <li class="process_item">
+                                    <div class="process__number"><span>3</span></div>
+                                    <div class="process__body">
+                                        <h4>Accede al sistema</h4>
+                                        <p>Desde tu navegador podrás monitorear y evaluar tu flotilla gratis por 30 dias</p>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Precios -->
+            <a id="precios"></a>
+            <section class="text-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10 col-lg-8">
+                            <h1>Un plan a tu medida</h1>
+                            <p class="lead">
+                                Sin cotizaciones complicadas ni costos ocultos. Tendrás todo el detalle de lo que estas pagando.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="pricing pricing-1 boxed boxed--sm boxed--border">
+                                <h3>Free</h3>
+                                <span class="h2"><strong>$0 MXN</strong></span>
+                                <br/>
+                                <hr>
+                                <ul>
+                                    <li>
+                                        <span class="checkmark bg--primary-1"></span>
+                                        <span>Funciona con App Spider Tag</span>
+                                    </li>
+                                    <li>
+                                        <span class="checkmark bg--primary-1"></span>
+                                        <span>Ubicación</span>
+                                    </li>
+                                </ul>
+                                <a class="btn btn--primary" href="./order/">
+                                    <span class="btn__text">ADQUIRIR</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="pricing pricing-1 boxed boxed--sm boxed--border">
+                                <h3>Smart</h3>
+                                <span class="h2"><strong>$99 MXN</strong></span>
+                                <span class="type--fine-print">Por vehículo, Pago Mensual o Anualizado (Incluye IVA)</span>
+                                <hr>
+                                <ul>
+                                    <li>
+                                        <span class="checkmark bg--primary-1"></span>
+                                        <span><strong>Prueba gratis por 30 dias</strong></span>
+                                    </li>
+                                    <li>
+                                        <span class="checkmark bg--primary-1"></span>
+                                        <span>Funciona con App Spider Tag</span>
+                                    </li>
+                                    <li>
+                                        <span class="checkmark bg--primary-1"></span>
+                                        <span>Ubicación</span>
+                                    </li>
+                                    <li>
+                                        <span class="checkmark bg--primary-1"></span>
+                                        <span>Recorridos Históricos</span>
+                                    </li>
+                                    <li>
+                                        <span class="checkmark bg--primary-1"></span>
+                                        <span>Mapas de calor</span>
+                                    </li>
+                                    <li>
+                                        <span class="checkmark bg--primary-1"></span>
+                                        <span>Geocercas</span>
+                                    </li>
+                                    <li>
+                                        <span class="checkmark bg--primary-1"></span>
+                                        <span>Conductas de manejo básicas</span>
+                                    </li>
+                                </ul>
+                                <a class="btn btn--primary" href="./order/">
+                                    <span class="btn__text">ADQUIRIR</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="pricing pricing-1 boxed boxed--sm boxed--border">
+                                <h3>Full</h3>
+                                <span class="h2"><strong>$299 MXN*</strong></span>
+                                <span class="type--fine-print">Por vehículo, Pago Mensual o Anualizado (Incluye IVA)</span>
+                                <hr>
+                                <ul>
+                                    <li>
+                                        <span class="checkmark bg--primary-1"></span>
+                                        <span><strong>Fácil de instalar</strong></span>
+                                    </li>
+                                    <li>
+                                        <span class="checkmark bg--primary-1"></span>
+                                        <span>Funciona con Dispositivo OBD Spider</span>
+                                    </li>
+                                    <li>
+                                        <span class="checkmark bg--primary-1"></span>
+                                        <span>Funcionalidades de plan Smart mas...</span>
+                                    </li>
+                                    <li>
+                                        <span class="checkmark bg--primary-1"></span>
+                                        <span>Conductas de manejo extendidas</span>
+                                    </li>
+                                    <li>
+                                        <span class="checkmark bg--primary-1"></span>
+                                        <span>Monitoreo de consumo de combustible</span>
+                                    </li>
+                                    <li>
+                                        <span class="checkmark bg--primary-1"></span>
+                                        <span>Calendario de mantenimientos</span>
+                                    </li>
+                                    <li>
+                                        <span class="checkmark bg--primary-1"></span>
+                                        <span>Planificacion de rutas</span>
+                                    </li>
+                                </ul>
+                                <a class="btn btn--primary" href="./order/">
+                                    <span class="btn__text">ADQUIRIR</span>
+                                </a>
+                            </div>
+                            <span class="type--fine-print">* Debe adquirir dispositivo OBD Spider</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Contacto -->
+            <section class="bg--dark">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-md-5">
+                            <p class="lead">Email: contacto@spider.com.mx<br /></p>
+                            <p class="lead">¿ Tienes dudas o necesitas mas información ?</p>
+                            <p class="lead">Estamos a tus órdenes.</p>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <form class="form-email row mx-0" data-success="Thanks for your enquiry, we'll be in touch shortly." data-error="Please fill in all fields correctly.">
+                                <div class="col-md-6 col-12">
+                                    <label>Nombre:</label>
+                                    <input type="text" name="name" class="validate-required" />
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <label>Email:</label>
+                                        <input type="email" name="email" class="validate-required validate-email" />
+                                    </div>
+                                    <div class="col-md-12 col-12">
+                                        <label>Mensaje:</label>
+                                        <textarea rows="4" name="Message" class="validate-required"></textarea>
+                                    </div>
+                                    <div class="col-md-5 col-lg-4 col-6">
+                                        <button type="submit" class="btn btn--primary type--uppercase">Enviar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>                    
+                </div>
+            </section>
+            <!-- Footer -->
+            <footer class="footer-3 text-center-xs space--xs">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="type--fine-print">
+                                Sistema de Administración de Flotillas Vehiculares
+                            </p>
+                        </div>
+                        <div class="col-md-6 text-right text-center-xs">
+                            <span class="type--fine-print">&copy;
+                                <span class="update-year"></span> Spider Fleet SAPI de CV</span>
+                            <a class="type--fine-print" href="#">Aviso de Privacidad</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- Slider -->
+        <a class="back-to-top inner-link" href="#start" data-scroll-class="100vh:active">
+            <i class="material-icons">expand_less</i>
+        </a>
+        <!-- Scripts -->
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/smooth-scroll.min.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

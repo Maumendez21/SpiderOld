@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns:kml="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Cumbres Expreso Tec - Ruta y Paradas</name>
+    <description><![CDATA[Horarios, Rutas y Paradas<br>Semestre AGOSTO-DICIEMBRE 2017<br>http://movilidad.mty.itesm.mx<br>Ver. 16/jun/2017<br>Mayor información: (81) 8358-2000 ext 3668 y 3682, expresotec.mty@itesm.mx o movilidad.mty@itesm.mx]]></description>
+    <Style id="icon-503-DB4436-normal">
+      <IconStyle>
+        <color>ff3644db</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-503-DB4436-highlight">
+      <IconStyle>
+        <color>ff3644db</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-503-DB4436">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-503-DB4436-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-503-DB4436-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-503-DB4436-nodesc-normal">
+      <IconStyle>
+        <color>ff3644db</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-503-DB4436-nodesc-highlight">
+      <IconStyle>
+        <color>ff3644db</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-503-DB4436-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-503-DB4436-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-503-DB4436-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-00AEEF-4000-normal">
+      <LineStyle>
+        <color>ffefae00</color>
+        <width>4</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-00AEEF-4000-highlight">
+      <LineStyle>
+        <color>ffefae00</color>
+        <width>6</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-00AEEF-4000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-00AEEF-4000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-00AEEF-4000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Ruta Cumbres 18KM 50MIN</name>
+      <Placemark>
+        <name>Tabla de horarios (Entradas y Salidas)</name>
+        <description><![CDATA[<img src="https://lh5.googleusercontent.com/-SeJ5Bbm1B3ZaTI8jRozfKwSwld2wUPdl3k9K6Q3VbAjNBbOznJsPm9IWbbzOC3k_-VdMeTSeb6ThN0c-QjQkkoMECKgpafRnpo-x4d8-qpV8H_NRpMdPwJa6n0jPUkH" height="200" width="auto" /><br><br>http://movilidad.mty.itesm.mx/expresotec/ruta_cumbres.php]]></description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://lh5.googleusercontent.com/-SeJ5Bbm1B3ZaTI8jRozfKwSwld2wUPdl3k9K6Q3VbAjNBbOznJsPm9IWbbzOC3k_-VdMeTSeb6ThN0c-QjQkkoMECKgpafRnpo-x4d8-qpV8H_NRpMdPwJa6n0jPUkH</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -100.3904834,25.7294076,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Ruta Cumbres 18KM</name>
+        <description>http://movilidad.mty.itesm.mx/expresotec/ruta_cumbres.php</description>
+        <styleUrl>#line-00AEEF-4000</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -100.397353,25.731243,0
+            -100.3977,25.731458,0
+            -100.398056,25.731678,0
+            -100.398425,25.732,0
+            -100.398721,25.732258,0
+            -100.39896,25.732439,0
+            -100.399141,25.73259,0
+            -100.399311,25.732717,0
+            -100.399617,25.732954,0
+            -100.399743,25.733051,0
+            -100.39985,25.733142,0
+            -100.400033,25.733293,0
+            -100.400135,25.733353,0
+            -100.400203,25.733293,0
+            -100.400232,25.733246,0
+            -100.400226,25.733175,0
+            -100.400193,25.733097,0
+            -100.400137,25.733003,0
+            -100.398957,25.732051,0
+            -100.398424,25.731607,0
+            -100.395839,25.729712,0
+            -100.395641,25.729495,0
+            -100.39547,25.729282,0
+            -100.395204,25.728268,0
+            -100.395022,25.727505,0
+            -100.394889,25.726913,0
+            -100.394752,25.726434,0
+            -100.394652,25.726055,0
+            -100.39404,25.723435,0
+            -100.393881,25.723234,0
+            -100.393546,25.722974,0
+            -100.393194,25.722818,0
+            -100.39232,25.722508,0
+            -100.389201,25.721168,0
+            -100.388789,25.720896,0
+            -100.388792,25.720689,0
+            -100.388705,25.720528,0
+            -100.388409,25.720284,0
+            -100.387915,25.720008,0
+            -100.387397,25.719903,0
+            -100.386785,25.71975,0
+            -100.384166,25.717366,0
+            -100.384068,25.717265,0
+            -100.381681,25.715116,0
+            -100.380581,25.714084,0
+            -100.380108,25.713588,0
+            -100.378219,25.712563,0
+            -100.377591,25.712178,0
+            -100.377161,25.711839,0
+            -100.369931,25.704983,0
+            -100.36976,25.704795,0
+            -100.369582,25.704637,0
+            -100.369268,25.704317,0
+            -100.367421,25.702551,0
+            -100.365762,25.701402,0
+            -100.364268,25.700573,0
+            -100.35745,25.696971,0
+            -100.357338,25.696923,0
+            -100.357342,25.696304,0
+            -100.357322,25.69584,0
+            -100.357214,25.695355,0
+            -100.357036,25.694999,0
+            -100.35463,25.694919,0
+            -100.354644,25.694265,0
+            -100.351798,25.694246,0
+            -100.351478,25.694139,0
+            -100.35147,25.693991,0
+            -100.352694,25.673419,0
+            -100.352761,25.672781,0
+            -100.352952,25.672323,0
+            -100.353293,25.671412,0
+            -100.353331,25.670904,0
+            -100.353107,25.670619,0
+            -100.352802,25.670478,0
+            -100.351005,25.670044,0
+            -100.345279,25.668363,0
+            -100.340301,25.667022,0
+            -100.334534,25.665981,0
+            -100.328838,25.66508,0
+            -100.322684,25.66396,0
+            -100.319945,25.663523,0
+            -100.316413,25.66282,0
+            -100.313845,25.662354,0
+            -100.311414,25.662019,0
+            -100.309998,25.661749,0
+            -100.308755,25.661702,0
+            -100.307831,25.661789,0
+            -100.305734,25.662359,0
+            -100.303643,25.663701,0
+            -100.301068,25.665416,0
+            -100.299858,25.665926,0
+            -100.298725,25.666397,0
+            -100.297665,25.666726,0
+            -100.297403,25.66624,0
+            -100.297352,25.6594,0
+            -100.292834,25.651725,0
+            -100.292629,25.651273,0
+            -100.292307,25.651225,0
+            -100.292161,25.651364,0
+            -100.292163,25.651539,0
+            -100.292141,25.6517,0
+            -100.290593,25.652907,0
+            -100.29027,25.653034,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>00:00 HEB (Inicio)</name>
+        <styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -100.397372,25.73121,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>00:05 Barcelona</name>
+        <styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -100.39655,25.730125,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>00:06 Diamant (Super 7)</name>
+        <styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -100.394353,25.724517,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>00:10 Paseo de los Navegantes / Rotonda de las Casas</name>
+        <styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -100.388583,25.720236,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>00:14 Eric El Rojo (Super 7)</name>
+        <styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -100.382937,25.716014,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>00:18 Paseo de la Cima (Starbucks)</name>
+        <styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -100.377621,25.712069,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>00:24 VIPS</name>
+        <styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -100.363045,25.699873,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>00:28 Parque Av. Enrique C. Livas y 7a. Avenida</name>
+        <styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -100.357322,25.695632,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>00:31 Clínica Ricardo Madla</name>
+        <styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -100.354719,25.694334,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Tecnológico de Monterrey, Campus Monterrey</name>
+        <styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -100.291024,25.651358,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

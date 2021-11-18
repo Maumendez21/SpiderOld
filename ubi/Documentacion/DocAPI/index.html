@@ -1,0 +1,1938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Mobile Specific -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Documentación REST API UBI">
+  <meta name="keywords" content="Documentacion, UBI," />
+  <title>UBI - API Documentation</title>
+  <link rel="icon" href="img/favicon.png" type="image/x-icon" />
+
+  <!-- ========== Css Files ========== -->
+  <link href="css/prism.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link href="css/root.css" rel="stylesheet">
+  
+  <link href="css/prism.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="css/root.css" rel="stylesheet">
+
+
+  </head>
+  <body>
+  <!-- Start Page Loading -->
+  <div class="loading"><img src="img/loading.gif" alt="loading-img"></div>
+  <!-- End Page Loading -->
+ <!-- //////////////////////////////////////////////////////////////////////////// --> 
+  <!-- START TOP -->
+  <div id="top" class="clearfix">
+    <div class="container">
+    <div class="row">
+    <!-- Start App Logo -->
+    <div class="applogo">
+      <a href="index.html" class="logo">UBI <span>Documentación</span></a>
+    </div>
+    <!-- End App Logo -->
+
+    <!-- Start Searchbox -->
+<!--
+    <form class="searchform">
+      <input type="text" class="searchbox" id="searchbox" placeholder="Search">
+      <span class="searchbutton"><i class="fa fa-search"></i></span>
+    </form>
+-->
+    <!-- End Searchbox -->
+
+    <!-- Start Top Menu -->
+<!--
+    <ul class="topmenu">
+      <li><a href="javascript:void(0);">Files</a></li>
+      <li><a href="javascript:void(0);">Authors</a></li>
+        <li><a href="javascript:void(0);">Demo</a></li>
+        <li><a href="javascript:void(0);">Pricing</a></li>
+        <li><a href="javascript:void(0);">Contact US</a></li>
+        <li class="dropdown">
+        <a href="javascript:void(0);" data-toggle="dropdown" class="dropdown-toggle">My Files <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="javascript:void(0);">Videos</a></li>
+          <li><a href="javascript:void(0);">Pictures</a></li>
+          <li><a href="javascript:void(0);">Blog Posts</a></li>
+        </ul>
+      </li>
+    </ul>
+-->
+    <!-- End Top Menu -->
+    </div>
+    </div>
+  </div>
+  <!-- END TOP -->
+ <!-- //////////////////////////////////////////////////////////////////////////// --> 
+
+
+ <!-- //////////////////////////////////////////////////////////////////////////// --> 
+<!-- START CONTENT -->
+<div class="content" id="pixxett-ui">
+  <div class="container">
+    <div class="row">
+  <!-- Start Page Header -->
+  
+  <div class="page-header">
+    <h1 class="title">Documentación UBI</h1>
+      <div class="discription">
+        <span class="active">UBI seguros</span>
+    </div>
+  </div>
+   
+  <!-- End Page Header -->
+
+<!-- START CONTAINER -->
+<div class="container-widget pixxett-ui">
+  <!-- Start Top Stats -->
+  <div>
+    <div id="documenter_content" class="method-area-wrapper">
+      <div class="scheme-container">
+        <section class="schemes wrapper block col-12">
+          <label>
+            <span class="schemes-title">Schemes</span>
+            <select><option value="http">http</option></select>
+          </label><div class="auth-wrapper">
+<!--
+          <button class="btn authorize unlocked">
+            <span>Authorize</span>
+          </button>
+-->
+        </div>
+        </section>
+      </div>
+      
+      <!--  OBD      -->
+      
+      <div class="method">
+        <div class="method-area">
+          <div class="wrapper">
+            <section class="block col-12 block-desktop col-12-desktop">
+              <div>
+                <div class="opblock-tag-section is-open">
+                  <h4 class="opblock-tag collapse-button" data-toggle="collapse" data-target="#main-collaps"><span>OBD</span><small>APIs relacionadas directamente con la lectura de la ECU</small>
+                    <button class="collapse-button" data-toggle="collapse" data-target="#main-collaps"></button>
+                  </h4>
+                  <div id="main-collaps" class="collapse opblock opblock-post opblock-post-wrapper">
+	                  
+                    <div class="opblock opblock-get collapse-inner-button" data-id="1-1">
+                      <div class="opblock-summary opblock-summary-get">
+                        <span class="opblock-summary-method">GET</span><span class="opblock-summary-path"><span>https://oneotelematic.azurewebsites.net/api/obd/VIN</span></span>
+                        <div class="opblock-summary-description">Lee VIN</div>
+                        <button class="collapse-inner-button" data-id="1-1"></button>
+                      </div>
+                      <div id="summary_div_1-1" style="display: none">
+                        <div>
+                          <div style="height: auto; border: none; margin: 0px; padding: 0px;">
+                            <div class="opblock-body">
+                              <div class="opblock-description-wrapper">
+                                <div class="opblock-description">
+                                  <div>
+              <p>Devuelve el VIN (Vehicule Identification Number) obtenido de la ECU.</p>
+              </div>
+                                </div>
+                              </div>
+                              <div class="opblock-section">
+                                <div class="opblock-section-header">
+                                  <h4 class="opblock-title">Parameters</h4>
+                                </div>
+                                <div class="table-container table-responsive">
+                                  <table class="parameters">
+                                    <thead>
+                                    <tr>
+                                      <th class="col col_header parameters-col_name">Name</th>
+                                      <th class="col col_header parameters-col_description">Value</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                      <td class="col parameters-col_name"><div class="parameter__name required">usuario<span style="color: red;">&nbsp;*</span></div>
+                                        
+                                      <td class="col parameters-col_description"><div>
+                      <p>iperezs@runbox.com</p>
+                      </div></td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                              <div class="execute-wrapper"></div>
+                              <div class="responses-wrapper">
+                                <div class="opblock-section-header">
+                                  <h4>Responses</h4>
+                                  <label>
+                                    <span>Response content type</span>
+                                    <span class="content-type-wrapper execute-content-type">
+                                      <select class="content-type">
+                                        <option value="application/json">application/json</option>
+                                      </select>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="responses-inner">
+                                  <table class="responses-table">
+                                    <thead>
+                                    <tr class="responses-header">
+                                      <td class="col col_header response-col_status">Code</td>
+                                      <td class="col col_header response-col_description">Description</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="response ">
+                                      <td class="col response-col_status">200</td>
+                                      <td class="col response-col_description"><div class="response-col_description__inner">
+                                        <div>
+                        <p>successful operation</p>
+                        </div>
+                                      </div>
+                                        <div>
+                                          <ul class="tab">
+                                            
+                                          </ul>
+                                          <div>
+                                            <div>
+                          <pre class="body-param__example microlight"><span style="">{</span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #f4b342;">"usuario"</span><span style="">:</span><span style="color: #090808; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">"iperezs@runbox.com"</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #f4b342;">"device"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">"213WP2017005552"</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #f4b342;">"lastSync"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">"2018-05-28T04:29:10.457"</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #f4b342;">"vin"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">"WAUAFCF43HN030264"</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+</span><span style="">}</span></pre>
+
+                                            </div>
+                                          </div>
+                                        </div></td>
+                                    </tr>
+                                    <tr class="response ">
+                                      <td class="col response-col_status">400</td>
+                                      <td class="col response-col_description"><div class="response-col_description__inner">
+                                        <div>
+                        <p>Invalid status value</p>
+                        </div>
+                                      </div></td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="opblock opblock-get collapse-inner-button" data-id="1-2">
+                      <div class="opblock-summary opblock-summary-get">
+                        <span class="opblock-summary-method">GET</span><span class="opblock-summary-path"><span>https://oneotelematic.azurewebsites.net/api/obd/MIL</span></span>
+                        <div class="opblock-summary-description">Alarma MIL </div>
+                        <button class="collapse-inner-button" data-id="1-2"></button>
+                      </div>
+                      <div id="summary_div_1-2" style="display: none">
+                        <div>
+                          <div style="height: auto; border: none; margin: 0px; padding: 0px;">
+                            <div class="opblock-body">
+                              <div class="opblock-description-wrapper">
+                                <div class="opblock-description">
+                                  <div>
+              <p>Devuelve alarma MIL (Malfunction Indicator Lamp) en caso de que el vehículo </p>
+              </div>
+                                </div>
+                              </div>
+                              <div class="opblock-section">
+                                <div class="opblock-section-header">
+                                  <h4 class="opblock-title">Parameters</h4>
+                                </div>
+                                <div class="table-container table-responsive">
+                                  <table class="parameters">
+                                    <thead>
+                                    <tr>
+                                      <th class="col col_header parameters-col_name">Name</th>
+                                      <th class="col col_header parameters-col_description">Value</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                      <td class="col parameters-col_name"><div class="parameter__name required">usuario<span style="color: red;">&nbsp;*</span></div>
+                                      <td class="col parameters-col_description"><div>
+                      <p>iperezs@runbox.com</p>
+                      </div></td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                              <div class="execute-wrapper"></div>
+                              <div class="responses-wrapper">
+                                <div class="opblock-section-header">
+                                  <h4>Responses</h4>
+                                  <label>
+                                    <span>Response content type</span>
+                                    <span class="content-type-wrapper execute-content-type">
+                                      <select class="content-type">
+                                        <option value="application/json">application/json</option>
+                                      </select>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="responses-inner">
+                                  <table class="responses-table">
+                                    <thead>
+                                    <tr class="responses-header">
+                                      <td class="col col_header response-col_status">Code</td>
+                                      <td class="col col_header response-col_description">Description</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="response ">
+                                      <td class="col response-col_status">200</td>
+                                      <td class="col response-col_description"><div class="response-col_description__inner">
+                                        <div>
+                        <p>successful operation</p>
+                        </div>
+                                      </div>
+                                        <div>
+                                          <ul class="tab">
+                                            
+                                          </ul>
+                                          <div>
+                                            <div>
+                          <pre class="body-param__example microlight"><span style="">{</span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #f4b342;">"mil"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">"false"</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #f4b342;">"datetime"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">"0001-01-01T00:00:00"</span><span style=""></span><span style="color: #555; font-weight: bold;">
+</span><span style="">}</span></pre>
+                                            </div>
+                                          </div>
+                                        </div></td>
+                                    </tr>
+                                    <tr class="response ">
+                                      <td class="col response-col_status">400</td>
+                                      <td class="col response-col_description"><div class="response-col_description__inner">
+                                        <div>
+                        <p>Invalid status value</p>
+                        </div>
+                                      </div></td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="opblock opblock-get collapse-inner-button" data-id="1-3">
+                      <div class="opblock-summary opblock-summary-get">
+                        <span class="opblock-summary-method">GET</span><span class="opblock-summary-path"><span>https://oneotelematic.azurewebsites.net/api/obd/averias</span></span>
+                        <div class="opblock-summary-description">Lee Averías</div>
+                        <button class="collapse-inner-button" data-id="1-3"></button>
+                      </div>
+                      <div id="summary_div_1-3" style="display: none">
+                        <div>
+                          <div style="height: auto; border: none; margin: 0px; padding: 0px;">
+                            <div class="opblock-body">
+                              <div class="opblock-description-wrapper">
+                                <div class="opblock-description">
+                                  <div>
+              <p>Devuelve el número y la descripción de las averías detectadas por la ECU.</p>
+              </div>
+                                </div>
+                              </div>
+                              <div class="opblock-section">
+                                <div class="opblock-section-header">
+                                  <h4 class="opblock-title">Parameters</h4>
+                                </div>
+                                <div class="table-container table-responsive">
+                                  <table class="parameters">
+                                    <thead>
+                                    <tr>
+                                      <th class="col col_header parameters-col_name">Name</th>
+                                      <th class="col col_header parameters-col_description">Value</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                      <td class="col parameters-col_name"><div class="parameter__name required">device<span style="color: red;">&nbsp;*</span></div>
+                                        
+                                      <td class="col parameters-col_description"><div>
+                      <p>213WP2017005552</p>
+                      </div></td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                              <div class="execute-wrapper"></div>
+                              <div class="responses-wrapper">
+                                <div class="opblock-section-header">
+                                  <h4>Responses</h4>
+                                  <label>
+                                    <span>Response content type</span>
+                                    <span class="content-type-wrapper execute-content-type">
+                                      <select class="content-type">
+                                        <option value="application/json">application/json</option>
+                                      </select>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="responses-inner">
+                                  <table class="responses-table">
+                                    <thead>
+                                    <tr class="responses-header">
+                                      <td class="col col_header response-col_status">Code</td>
+                                      <td class="col col_header response-col_description">Description</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="response ">
+                                      <td class="col response-col_status">200</td>
+                                      <td class="col response-col_description"><div class="response-col_description__inner">
+                                        <div>
+                        <p>successful operation</p>
+                        </div>
+                                      </div>
+                                        <div>
+                                          <ul class="tab">
+                                            
+                                          </ul>
+                                          <div>
+                                            <div>
+                          <pre class="body-param__example microlight"><span style="">{</span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #f4b342;">"nAverias"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">"0"</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #f4b342;">"averias"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">""</span><span style=""></span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #f4b342;">"stored"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">"false"</span><span style=""></span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #f4b342;">"tipo"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">""</span><span style=""></span><span style="color: #555; font-weight: bold;">
+</span><span style="">}</span></pre>
+                                            </div>
+                                          </div>
+                                        </div></td>
+                                    </tr>
+                                    <tr class="response ">
+                                      <td class="col response-col_status">400</td>
+                                      <td class="col response-col_description"><div class="response-col_description__inner">
+                                        <div>
+                        <p>Invalid status value</p>
+                        </div>
+                                      </div></td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                </div>
+              </div>
+                
+                <div class="opblock-tag-section is-open">
+                  <h4 class="opblock-tag collapse-button" data-toggle="collapse" data-target="#main-collaps1"><span>Vehículos</span><small>Parámetros &amp; Características</small>
+                    <button class="collapse-button" data-toggle="collapse" data-target="#main-collaps1"></button>
+                  </h4>
+                  <div id="main-collaps1" class="collapse opblock opblock-post opblock-post-wrapper">
+                    
+                    <div class="opblock opblock-get">
+                      <div class="opblock-summary opblock-summary-get collapse-inner-button" data-id="2-1">
+                        <span class="opblock-summary-method">GET</span><span class="opblock-summary-path"><span>https://oneotelematic.azurewebsites.net/api/vehiculo</span></span>
+                        <div class="opblock-summary-description">Lee el vehículo</div>
+                        <button class="collapse-inner-button" data-id="2-1"></button>
+                      </div>
+                      <div id="summary_div_2-1" style="display: none">
+                        <div>
+                          <div style="height: auto; border: none; margin: 0px; padding: 0px;">
+                            <div class="opblock-body">
+                              <div class="opblock-description-wrapper">
+                                <div class="opblock-description">
+                                  <div>
+              <p>Devuelve las características del vehículo por usuario</p>
+              </div>
+                                </div>
+                              </div>
+                              <div class="opblock-section">
+                                <div class="opblock-section-header">
+                                  <h4 class="opblock-title">Parameters</h4>
+                                </div>
+                                <div class="table-container table-responsive">
+                                  <table class="parameters">
+                                    <thead>
+                                    <tr>
+                                      <th class="col col_header parameters-col_name">Name</th>
+                                      <th class="col col_header parameters-col_description">Value</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                      <td class="col parameters-col_name"><div class="parameter__name required">usuario<span style="color: red;">&nbsp;*</span></div>
+                                        </td>
+                                      <td class="col parameters-col_description"><div>
+                      <p>iperezs@runbox.com</p>
+                      </div></td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                              <div class="execute-wrapper"></div>
+                              <div class="responses-wrapper">
+                                <div class="opblock-section-header">
+                                  <h4>Responses</h4>
+                                  <label>
+                                    <span>Response content type</span>
+                                    <span class="content-type-wrapper execute-content-type">
+                                      <select class="content-type">
+                                        <option value="application/json">application/json</option>
+                                      </select>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="responses-inner">
+                                  <table class="responses-table">
+                                    <thead>
+                                    <tr class="responses-header">
+                                      <td class="col col_header response-col_status">Code</td>
+                                      <td class="col col_header response-col_description">Description</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="response ">
+                                      <td class="col response-col_status">200</td>
+                                      <td class="col response-col_description"><div class="response-col_description__inner">
+                                        <div>
+                        <p>successful operation</p>
+                        </div>
+                                      </div>
+                                        <div>
+                                          <ul class="tab">
+                                            
+                                          </ul>
+                                          <div>
+                                            <div>
+                          <pre class="body-param__example microlight"><span style="">{</span><span style="color: #555; font-weight: bold;"></span>
+</span><span style="color: #555;">"usuario"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">"iperezs@runbox.com"</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #555;">"name"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">"Audi"</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #555;">"brand"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">"Audi"</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #555;">"year"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">"2017"</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #555;">"model"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">"A4"</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #555;">"style"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">""</span><span style=""></span><span style="color: #555; font-weight: bold;">
+</span><span style="">}</span></pre>
+
+                                            </div>
+                                          </div>
+                                        </div></td>
+                                    </tr>
+                                    <tr class="response ">
+                                      <td class="col response-col_status">400</td>
+                                      <td class="col response-col_description"><div class="response-col_description__inner">
+                                        <div>
+                        <p>Invalid status value</p>
+                        </div>
+                                      </div></td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="opblock opblock-get">
+                      <div class="opblock-summary opblock-summary-get collapse-inner-button" data-id="2-2">
+                        <span class="opblock-summary-method">GET</span><span class="opblock-summary-path"><span>https://oneotelematic.azurewebsites.net/api/vehiculo/fabricante</span></span>
+                        <div class="opblock-summary-description">Lista de fabricantes</div>
+                        <button class="collapse-inner-button" data-id="2-2"></button>
+                      </div>
+                      <div id="summary_div_2-2" style="display: none">
+                        <div>
+                          <div style="height: auto; border: none; margin: 0px; padding: 0px;">
+                            <div class="opblock-body">
+                              <div class="opblock-description-wrapper">
+                                <div class="opblock-description">
+                                  <div>
+              <p>Multiple status values can be provided with comma separated strings</p>
+              </div>
+                                </div>
+                              </div>
+                              <div class="opblock-section">
+                                <div class="opblock-section-header">
+                                  <h4 class="opblock-title">Parameters</h4>
+                                </div>
+                                <div class="table-container table-responsive">
+                                  <table class="parameters">
+                                    <thead>
+                                    <tr>
+                                      <th class="col col_header parameters-col_name">Name</th>
+                                      <th class="col col_header parameters-col_description">Description</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                              <div class="execute-wrapper"></div>
+                              <div class="responses-wrapper">
+                                <div class="opblock-section-header">
+                                  <h4>Responses</h4>
+                                  <label>
+                                    <span>Response content type</span>
+                                    <span class="content-type-wrapper execute-content-type">
+                                      <select class="content-type">
+                                        <option value="application/json">application/json</option>
+                                      </select>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="responses-inner">
+                                  <table class="responses-table">
+                                    <thead>
+                                    <tr class="responses-header">
+                                      <td class="col col_header response-col_status">Code</td>
+                                      <td class="col col_header response-col_description">Description</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="response ">
+                                      <td class="col response-col_status">200</td>
+                                      <td class="col response-col_description"><div class="response-col_description__inner">
+                                        <div>
+                        <p>successful operation</p>
+                        </div>
+                                      </div>
+                                        <div>
+                                          <ul class="tab">
+                                          </ul>
+                                          <div>
+                                            <div>
+                          <pre class="body-param__example microlight"><span style="">[</span><span style="color: #555; font-weight: bold;">
+<span style="">{</span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #f4b342;">"maker"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">"Acura"</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #f4b342;">"idMaker"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">1</span><span style=""></span><span style="color: #555; font-weight: bold;">
+<span style="">}</span><span style="color: #555; font-weight: bold;">
+<span style="">...</span><span style="color: #555; font-weight: bold;">
+<span style="">{</span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #f4b342;">"maker"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">"Volvo"</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #f4b342;">"idMaker"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">33</span><span style=""></span><span style="color: #555; font-weight: bold;">
+<span style="">}</span><span style="color: #555; font-weight: bold;">
+</span><span style="">]</span></pre>
+                                            </div>
+                                          </div>
+                                        </div></td>
+                                    </tr>
+                                    <tr class="response ">
+                                      <td class="col response-col_status">400</td>
+                                      <td class="col response-col_description"><div class="response-col_description__inner">
+                                        <div>
+                        <p>Invalid status value</p>
+                        </div>
+                                      </div></td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="opblock opblock-get">
+                      <div class="opblock-summary opblock-summary-get collapse-inner-button" data-id="2-3">
+                        <span class="opblock-summary-method">GET</span><span class="opblock-summary-path"><span>https://oneotelematic.azurewebsites.net/api/vehiculo/year</span></span>
+                        <div class="opblock-summary-description">Lista de años</div>
+                        <button class="collapse-inner-button" data-id="2-3"></button>
+                      </div>
+                      <div id="summary_div_2-3" style="display: none">
+                        <div>
+                          <div style="height: auto; border: none; margin: 0px; padding: 0px;">
+                            <div class="opblock-body">
+                              <div class="opblock-description-wrapper">
+                                <div class="opblock-description">
+                                  <div>
+              <p>Lista de años por fabricante</p>
+              </div>
+                                </div>
+                              </div>
+                              <div class="opblock-section">
+                                <div class="opblock-section-header">
+                                  <h4 class="opblock-title">Parameters</h4>
+                                </div>
+                                <div class="table-container table-responsive">
+                                  <table class="parameters">
+                                    <thead>
+                                    <tr>
+                                      <th class="col col_header parameters-col_name">Name</th>
+                                      <th class="col col_header parameters-col_description">Value</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                      <td class="col parameters-col_name"><div class="parameter__name required">id<span style="color: red;">&nbsp;*</span></div>
+                                        </td>
+                                      <td class="col parameters-col_description"><div>
+                      <p>1 </p>
+                      </div></td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                              <div class="execute-wrapper"></div>
+                              <div class="responses-wrapper">
+                                <div class="opblock-section-header">
+                                  <h4>Responses</h4>
+                                  <label>
+                                    <span>Response content type</span>
+                                    <span class="content-type-wrapper execute-content-type">
+                                      <select class="content-type">
+                                        <option value="application/json">application/json</option>
+                                      </select>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="responses-inner">
+                                  <table class="responses-table">
+                                    <thead>
+                                    <tr class="responses-header">
+                                      <td class="col col_header response-col_status">Code</td>
+                                      <td class="col col_header response-col_description">Description</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="response ">
+                                      <td class="col response-col_status">200</td>
+                                      <td class="col response-col_description"><div class="response-col_description__inner">
+                                        <div>
+                        <p>successful operation</p>
+                        </div>
+                                      </div>
+                                        <div>
+                                          <ul class="tab">
+                                            
+                                          </ul>
+                                          <div>
+                                            <div>
+                          <pre class="body-param__example microlight"><span style="">[</span><span style="color: #555; font-weight: bold;"></span>
+  <span style="">{</span><span style="color: #555; font-weight: bold;"></span>
+  <span style="color: #555;">"year"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">2018</span><span style=""></span><span style="color: #555; font-weight: bold;">
+</span><span style="">},</span><span style="color: #555; font-weight: bold;"></span>
+<span style="">{</span><span style="color: #555; font-weight: bold;"></span>
+<span style="color: #555;">"year"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">1999</span><span style=""></span><span style="color: #555; font-weight: bold;">
+</span><span style="">}</span><span style="color: #555; font-weight: bold;"></span>
+</span><span style="">]</span></pre>
+                                            </div>
+                                          </div>
+                                        </div></td>
+                                    </tr>
+                                    <tr class="response ">
+                                      <td class="col response-col_status">400</td>
+                                      <td class="col response-col_description"><div class="response-col_description__inner">
+                                        <div>
+                        <p>Invalid status value</p>
+                        </div>
+                                      </div></td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="opblock opblock-get">
+                      <div class="opblock-summary opblock-summary-get collapse-inner-button" data-id="2-4">
+                        <span class="opblock-summary-method">GET</span><span class="opblock-summary-path"><span>https://oneotelematic.azurewebsites.net/api/vehiculo/modelo</span></span>
+                        <div class="opblock-summary-description">Lista de modelos</div>
+                        <button class="collapse-inner-button" data-id="2-4"></button>
+                      </div>
+                      <div id="summary_div_2-4" style="display: none">
+                        <div>
+                          <div style="height: auto; border: none; margin: 0px; padding: 0px;">
+                            <div class="opblock-body">
+                              <div class="opblock-description-wrapper">
+                                <div class="opblock-description">
+                                  <div>
+              <p>Lista de modelos por fabricante de vehículos</p>
+              </div>
+                                </div>
+                              </div>
+                              <div class="opblock-section">
+                                <div class="opblock-section-header">
+                                  <h4 class="opblock-title">Parameters</h4>
+                                </div>
+                                <div class="table-container table-responsive">
+                                  <table class="parameters">
+                                    <thead>
+                                    <tr>
+                                      <th class="col col_header parameters-col_name">Name</th>
+                                      <th class="col col_header parameters-col_description">Value</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                      <td class="col parameters-col_name"><div class="parameter__name required">id<span style="color: red;">&nbsp;*</span></div></td>
+                                      <td class="col parameters-col_description"><div>
+                      <p>33</p>
+                      </div></td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                              <div class="execute-wrapper"></div>
+                              <div class="responses-wrapper">
+                                <div class="opblock-section-header">
+                                  <h4>Responses</h4>
+                                  <label>
+                                    <span>Response content type</span>
+                                    <span class="content-type-wrapper execute-content-type">
+                                      <select class="content-type">
+                                        <option value="application/json">application/json</option>
+                                      </select>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="responses-inner">
+                                  <table class="responses-table">
+                                    <thead>
+                                    <tr class="responses-header">
+                                      <td class="col col_header response-col_status">Code</td>
+                                      <td class="col col_header response-col_description">Description</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="response ">
+                                      <td class="col response-col_status">200</td>
+                                      <td class="col response-col_description"><div class="response-col_description__inner">
+                                        <div>
+                        <p>successful operation</p>
+                        </div>
+                                      </div>
+                                        <div>
+                                          <ul class="tab">
+                                            
+                                          </ul>
+                                          <div>
+                                            <div>
+                          <pre class="body-param__example microlight"><span style="">[</span><span style="color: #555; font-weight: bold;"></span>
+  <span style="">{</span><span style="color: #555; font-weight: bold;"></span>
+  <span style="color: #555;">"model"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">XC60</span><span style=""></span><span style="color: #555; font-weight: bold;">
+</span><span style="">},</span><span style="color: #555; font-weight: bold;"></span>
+<span style="">{</span><span style="color: #555; font-weight: bold;"></span>
+<span style="color: #555;">"model"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">S80</span><span style=""></span><span style="color: #555; font-weight: bold;">
+</span><span style="">}</span><span style="color: #555; font-weight: bold;"></span>
+</span><span style="">]</span></pre>
+                                            </div>
+                                          </div>
+                                        </div></td>
+                                    </tr>
+                                    <tr class="response ">
+                                      <td class="col response-col_status">400</td>
+                                      <td class="col response-col_description"><div class="response-col_description__inner">
+                                        <div>
+                        <p>Invalid status value</p>
+                        </div>
+                                      </div></td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+					<div class="opblock opblock-get">
+                      <div class="opblock-summary opblock-summary-get collapse-inner-button" data-id="2-5">
+                        <span class="opblock-summary-method">GET</span><span class="opblock-summary-path"><span>https://oneotelematic.azurewebsites.net/api/vehiculo/ubicacion</span></span>
+                        <div class="opblock-summary-description">Última ubicación registrada</div>
+                        <button class="collapse-inner-button" data-id="2-5"></button>
+                      </div>
+                      <div id="summary_div_2-5" style="display: none">
+                        <div>
+                          <div style="height: auto; border: none; margin: 0px; padding: 0px;">
+                            <div class="opblock-body">
+                              <div class="opblock-description-wrapper">
+                                <div class="opblock-description">
+                                  <div>
+              <p>Devuelve la última ubicación registrada por dispositivo</p>
+              </div>
+                                </div>
+                              </div>
+                              <div class="opblock-section">
+                                <div class="opblock-section-header">
+                                  <h4 class="opblock-title">Parameters</h4>
+                                </div>
+                                <div class="table-container table-responsive">
+                                  <table class="parameters">
+                                    <thead>
+                                    <tr>
+                                      <th class="col col_header parameters-col_name">Name</th>
+                                      <th class="col col_header parameters-col_description">Value</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                      <td class="col parameters-col_name"><div class="parameter__name required">device<span style="color: red;">&nbsp;*</span></div></td>
+                                      <td class="col parameters-col_description"><div>
+                      <p>213WP2017005552</p>
+                      </div></td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                              <div class="execute-wrapper"></div>
+                              <div class="responses-wrapper">
+                                <div class="opblock-section-header">
+                                  <h4>Responses</h4>
+                                  <label>
+                                    <span>Response content type</span>
+                                    <span class="content-type-wrapper execute-content-type">
+                                      <select class="content-type">
+                                        <option value="application/json">application/json</option>
+                                      </select>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="responses-inner">
+                                  <table class="responses-table">
+                                    <thead>
+                                    <tr class="responses-header">
+                                      <td class="col col_header response-col_status">Code</td>
+                                      <td class="col col_header response-col_description">Description</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="response ">
+                                      <td class="col response-col_status">200</td>
+                                      <td class="col response-col_description"><div class="response-col_description__inner">
+                                        <div>
+                        <p>successful operation</p>
+                        </div>
+                                      </div>
+                                        <div>
+                                          <ul class="tab">
+                                            
+                                          </ul>
+                                          <div>
+                                            <div>
+                          <pre class="body-param__example microlight">
+<span style="">{</span><span style="color: #555; font-weight: bold;"></span>
+  </span><span style="color: #555;">"dispositivo"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">"213WP2017005552"</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+  </span><span style="color: #555;">"nombre"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">"Ignacio Perez"</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+  </span><span style="color: #555;">"fecha"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">martes 29 mayo 2018 07:31:08 a. m.</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+  </span><span style="color: #555;">"latitud"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">"25.628597"</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+  </span><span style="color: #555;">"longitud"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">"-100.363652"</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+  </span><span style="color: #555;">"velocidad"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">5.76</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+  </span><span style="color: #555;">"direccion"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">226.39</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+  </span><span style="color: #555;">"estado"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">false</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+</span><span style="">}</span></pre>
+                                            </div>
+                                          </div>
+                                        </div></td>
+                                    </tr>
+                                    <tr class="response ">
+                                      <td class="col response-col_status">400</td>
+                                      <td class="col response-col_description"><div class="response-col_description__inner">
+                                        <div>
+                        <p>Invalid status value</p>
+                        </div>
+                                      </div></td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  </div>
+                </div>
+                
+                
+                
+
+                <div class="opblock-tag-section is-open">
+                  <h4 class="opblock-tag collapse-button" data-toggle="collapse" data-target="#main-collaps2"><span>Viajes</span><small>Ruta &amp; Incidentes</small>
+                    <button class="collapse-button" data-toggle="collapse" data-target="#main-collaps2"></button>
+                  </h4>
+                  <div id="main-collaps2" class="collapse opblock opblock-post opblock-post-wrapper">
+                    
+                    <div class="opblock opblock-get">
+                      <div class="opblock-summary opblock-summary-get collapse-inner-button" data-id="3-1">
+                        <span class="opblock-summary-method">GET</span><span class="opblock-summary-path"><span>https://oneotelematic.azurewebsites.net/api/viajes</span></span>
+                        <div class="opblock-summary-description">Lista de viajes</div>
+                        <button class="collapse-inner-button" data-id="3-1"></button>
+                      </div>
+                      <div id="summary_div_3-1" style="display: none">
+                        <div>
+                          <div style="height: auto; border: none; margin: 0px; padding: 0px;">
+                            <div class="opblock-body">
+                              <div class="opblock-description-wrapper">
+                                <div class="opblock-description">
+                                  <div>
+              <p>Devuelve la lista de viajes (recorridos) por usuario</p>
+              </div>
+                                </div>
+                              </div>
+                              <div class="opblock-section">
+                                <div class="opblock-section-header">
+                                  <h4 class="opblock-title">Parameters</h4>
+                                </div>
+                                <div class="table-container table-responsive">
+                                  <table class="parameters">
+                                    <thead>
+                                    <tr>
+                                      <th class="col col_header parameters-col_name">Name</th>
+                                      <th class="col col_header parameters-col_description">Values</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                      <td class="col parameters-col_name"><div class="parameter__name required">usuario<span style="color: red;">&nbsp;*</span></div>
+                                      <div class="parameter__name required">inicio<span style="color: red;">&nbsp;*</span></div>
+                                      <div class="parameter__name required">fin<span style="color: red;">&nbsp;*</span></div>
+                                        </td>
+                                      <td class="col parameters-col_description"><div>
+                      <p>iperezs@runbox.com</p>
+                      <p>2018-05-28 00:00:00</p>
+                      <p>2018-05-28 23:59:10</p>
+                      </div></td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                              <div class="execute-wrapper"></div>
+                              <div class="responses-wrapper">
+                                <div class="opblock-section-header">
+                                  <h4>Responses</h4>
+                                  <label>
+                                    <span>Response content type</span>
+                                    <span class="content-type-wrapper execute-content-type">
+                                      <select class="content-type">
+                                        <option value="application/json">application/json</option>
+                                      </select>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="responses-inner">
+                                  <table class="responses-table">
+                                    <thead>
+                                    <tr class="responses-header">
+                                      <td class="col col_header response-col_status">Code</td>
+                                      <td class="col col_header response-col_description">Description</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="response ">
+                                      <td class="col response-col_status">200</td>
+                                      <td class="col response-col_description"><div class="response-col_description__inner">
+                                        <div>
+                        <p>successful operation</p>
+                        </div>
+                                      </div>
+                                        <div>
+                                          <ul class="tab">
+                                            
+                                          </ul>
+                                          <div>
+                                            <div>
+                          <pre class="body-param__example microlight"><span style="">{</span><span style="color: #555; font-weight: bold;"></span>
+</span><span style="color: #555;">"id"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">25935</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #555;">"startDate"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">"2018-05-28T14:39:54"</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #555;">"distance"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">258.203</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #555;">"timeInSeconds"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">15860</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #555;">"nVelocidad"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">16</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #555;">"nRPM"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">0</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #555;">"nMovBrusco"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">0</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #555;">"nAcelerones"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">26</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #555;">"nFrenones"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">0</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #555;">"fuel"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">20.1</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #555;">"weather"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">"clear-day"</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #555;">"inicio"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">"West Del Mar Boulevard 368-378 Webb County"</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #555;">"fin"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">"Magnolia 101 San Pedro Garza García"</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #555;">"porcentageCity"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">536</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #555;">"porcentageHighWay"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">194</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #555;">"porcentageCountry"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">0</span><span style="">,</span><span style="color: #555; font-weight: bold;">            
+</span><span style="">}</span></pre>
+
+                                            </div>
+                                          </div>
+                                        </div></td>
+                                    </tr>
+                                    <tr class="response ">
+                                      <td class="col response-col_status">400</td>
+                                      <td class="col response-col_description"><div class="response-col_description__inner">
+                                        <div>
+                        <p>Invalid status value</p>
+                        </div>
+                                      </div></td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="opblock opblock-get">
+                      <div class="opblock-summary opblock-summary-get collapse-inner-button" data-id="3-2">
+                        <span class="opblock-summary-method">GET</span><span class="opblock-summary-path"><span>https://oneotelematic.azurewebsites.net/api/viajes/ruta</span></span>
+                        <div class="opblock-summary-description">Puntos recorridos</div>
+                        <button class="collapse-inner-button" data-id="3-2"></button>
+                      </div>
+                      <div id="summary_div_3-2" style="display: none">
+                        <div>
+                          <div style="height: auto; border: none; margin: 0px; padding: 0px;">
+                            <div class="opblock-body">
+                              <div class="opblock-description-wrapper">
+                                <div class="opblock-description">
+                                  <div>
+              <p>Devuelve los puntos de cada recorrido</p>
+              </div>
+                                </div>
+                              </div>
+                              <div class="opblock-section">
+                                <div class="opblock-section-header">
+                                  <h4 class="opblock-title">Parameters</h4>
+                                </div>
+                                <div class="table-container table-responsive">
+                                  <table class="parameters">
+                                    <thead>
+                                    <tr>
+                                      <th class="col col_header parameters-col_name">Name</th>
+                                      <th class="col col_header parameters-col_description">Description</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                      <td class="col parameters-col_name"><div class="parameter__name required">idViaje<span style="color: red;">&nbsp;*</span></div>
+										</td>
+                                      <td class="col parameters-col_description"><div>
+                      <p>25935</p>
+                      </div></td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                              <div class="execute-wrapper"></div>
+                              <div class="responses-wrapper">
+                                <div class="opblock-section-header">
+                                  <h4>Responses</h4>
+                                  <label>
+                                    <span>Response content type</span>
+                                    <span class="content-type-wrapper execute-content-type">
+                                      <select class="content-type">
+                                        <option value="application/json">application/json</option>
+                                      </select>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="responses-inner">
+                                  <table class="responses-table">
+                                    <thead>
+                                    <tr class="responses-header">
+                                      <td class="col col_header response-col_status">Code</td>
+                                      <td class="col col_header response-col_description">Value</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="response ">
+                                      <td class="col response-col_status">200</td>
+                                      <td class="col response-col_description"><div class="response-col_description__inner">
+                                        <div>
+                        <p>successful operation</p>
+                        </div>
+                                      </div>
+                                        <div>
+                                          <ul class="tab">
+                                            
+                                          </ul>
+                                          <div>
+                                            <div>
+                          <pre class="body-param__example microlight"><span style="">{</span><span style="color: #555; font-weight: bold;"></span>
+</span><span style="color: #555;">"resultLocations"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;"></span><span style="">{</span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #555;">"location"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;"></span><span style=""> [</span><span style="color: #555; font-weight: bold;">
+<span style="">{</span><span style="color: #555; font-weight: bold;"></span>
+</span><span style="color: #555;">"latitude"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">"27.56739"</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #555;">"longitude"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">"-99.501638"</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #555;">"speed"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">4.03</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #555;">"acceleration"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">0</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #555;">"timestamp"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">"2018-05-28T14:39:54"</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #555;">"distance"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">0.065</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #555;">"course"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">174.8</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+</span><span style="color: #555;">"altitude"</span><span style="">:</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">null</span><span style="">,</span><span style="color: #555; font-weight: bold;">
+<span style="">},</span><span style="color: #555; font-weight: bold;"></span>
+</span><span style="">...</span></pre>
+                                            </div>
+                                          </div>
+                                        </div></td>
+                                    </tr>
+                                    <tr class="response ">
+                                      <td class="col response-col_status">400</td>
+                                      <td class="col response-col_description"><div class="response-col_description__inner">
+                                        <div>
+                        <p>Invalid status value</p>
+                        </div>
+                                      </div></td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+<!--
+					<div class="opblock opblock-get">
+                      <div class="opblock-summary opblock-summary-get collapse-inner-button" data-id="3-3">
+                        <span class="opblock-summary-method">GET</span><span class="opblock-summary-path"><span>https://oneotelematic.azurewebsites.net/api/viajes/incidentes</span></span>
+                        <div class="opblock-summary-description">Puntos Incidentes</div>
+                        <button class="collapse-inner-button" data-id="3-3"></button>
+                      </div>
+                      <div id="summary_div_3-3" style="display: none">
+                        <div>
+                          <div style="height: auto; border: none; margin: 0px; padding: 0px;">
+                            <div class="opblock-body">
+                              <div class="opblock-description-wrapper">
+                                <div class="opblock-description">
+                                  <div>
+              <p>Devuelve los puntos de incidentes por cada recorrido</p>
+              </div>
+                                </div>
+                              </div>
+                              <div class="opblock-section">
+                                <div class="opblock-section-header">
+                                  <h4 class="opblock-title">Parameters</h4>
+                                </div>
+                                <div class="table-container table-responsive">
+                                  <table class="parameters">
+                                    <thead>
+                                    <tr>
+                                      <th class="col col_header parameters-col_name">Name</th>
+                                      <th class="col col_header parameters-col_description">Description</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                      <td class="col parameters-col_name"><div class="parameter__name required">status<span style="color: red;">&nbsp;*</span></div>
+                                        <div class="parаmeter__type">array[string]</div>
+                                        <div class="parameter__in">(query)</div></td>
+                                      <td class="col parameters-col_description"><div>
+                      <p>Status values that need to be considered for filter</p>
+                      </div></td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                              <div class="execute-wrapper"></div>
+                              <div class="responses-wrapper">
+                                <div class="opblock-section-header">
+                                  <h4>Responses</h4>
+                                  <label>
+                                    <span>Response content type</span>
+                                    <span class="content-type-wrapper execute-content-type">
+                                      <select class="content-type">
+                                        <option value="application/json">application/json</option>
+                                      </select>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="responses-inner">
+                                  <table class="responses-table">
+                                    <thead>
+                                    <tr class="responses-header">
+                                      <td class="col col_header response-col_status">Code</td>
+                                      <td class="col col_header response-col_description">Description</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="response ">
+                                      <td class="col response-col_status">200</td>
+                                      <td class="col response-col_description"><div class="response-col_description__inner">
+                                        <div>
+                        <p>successful operation</p>
+                        </div>
+                                      </div>
+                                        <div>
+                                          <ul class="tab">
+                                            <li class="tabitem active"><a class="tablinks" data-name="example">Example Value</a></li>
+                                            <li class="tabitem"><a class="tablinks" data-name="model">Model</a></li>
+                                          </ul>
+                                          <div>
+                                            <div>
+                          <pre class="example microlight"><span style="">&lt;</span><span style="">?</span><span style="color: #555; font-weight: bold;">xml</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">version</span><span style="">=</span><span style="color: #555;">"1.0"</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">encoding</span><span style="">=</span><span style="color: #555;">"UTF-8"</span><span style="">?</span><span style="">&gt;</span><span style="color: #555; font-weight: bold;">
+</span><span style="">&lt;!-- XML example cannot be generated --&gt;</span></pre>
+                                            </div>
+                                          </div>
+                                        </div></td>
+                                    </tr>
+                                    <tr class="response ">
+                                      <td class="col response-col_status">400</td>
+                                      <td class="col response-col_description"><div class="response-col_description__inner">
+                                        <div>
+                        <p>Invalid status value</p>
+                        </div>
+                                      </div></td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+-->
+
+
+                    
+                  </div>
+                </div>
+                
+				<!--
+<div class="opblock-tag-section is-open">
+                  <h4 class="opblock-tag collapse-button" data-toggle="collapse" data-target="#main-collaps3"><span>Estadísticas</span><small>Distancias &amp; Calificaciones</small>
+                    <button class="collapse-button" data-toggle="collapse" data-target="#main-collaps3"></button>
+                  </h4>
+                  <div id="main-collaps3" class="collapse opblock opblock-post opblock-post-wrapper">
+                    
+                    <div class="opblock opblock-get">
+                      <div class="opblock-summary opblock-summary-get collapse-inner-button" data-id="4-1">
+                        <span class="opblock-summary-method">GET</span><span class="opblock-summary-path"><span>https://oneotelematic.azurewebsites.net/api/estadisticas/distancia/periodo</span></span>
+                        <div class="opblock-summary-description">Distancia por Periodo</div>
+                        <button class="collapse-inner-button" data-id="4-1"></button>
+                      </div>
+                      <div id="summary_div_4-1" style="display: none">
+                        <div>
+                          <div style="height: auto; border: none; margin: 0px; padding: 0px;">
+                            <div class="opblock-body">
+                              <div class="opblock-description-wrapper">
+                                <div class="opblock-description">
+                                  <div>
+              <p>Devuelve el listado de usuarios con la distancia recorrida en cada periodo (mensualmente)</p>
+              </div>
+                                </div>
+                              </div>
+                              <div class="opblock-section">
+                                <div class="opblock-section-header">
+                                  <h4 class="opblock-title">Parameters</h4>
+                                </div>
+                                <div class="table-container table-responsive">
+                                  <table class="parameters">
+                                    <thead>
+                                    <tr>
+                                      <th class="col col_header parameters-col_name">Name</th>
+                                      <th class="col col_header parameters-col_description">Description</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                      <td class="col parameters-col_name"><div class="parameter__name required">status<span style="color: red;">&nbsp;*</span></div>
+                                        <div class="parаmeter__type">array[string]</div>
+                                        <div class="parameter__in">(query)</div></td>
+                                      <td class="col parameters-col_description"><div>
+                      <p>Status values that need to be considered for filter</p>
+                      </div></td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                              <div class="execute-wrapper"></div>
+                              <div class="responses-wrapper">
+                                <div class="opblock-section-header">
+                                  <h4>Responses</h4>
+                                  <label>
+                                    <span>Response content type</span>
+                                    <span class="content-type-wrapper execute-content-type">
+                                      <select class="content-type">
+                                        <option value="application/json">application/json</option>
+                                      </select>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="responses-inner">
+                                  <table class="responses-table">
+                                    <thead>
+                                    <tr class="responses-header">
+                                      <td class="col col_header response-col_status">Code</td>
+                                      <td class="col col_header response-col_description">Description</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="response ">
+                                      <td class="col response-col_status">200</td>
+                                      <td class="col response-col_description"><div class="response-col_description__inner">
+                                        <div>
+                        <p>successful operation</p>
+                        </div>
+                                      </div>
+                                        <div>
+                                          <ul class="tab">
+                                            <li class="tabitem active"><a class="tablinks" data-name="example">Example Value</a></li>
+                                            <li class="tabitem"><a class="tablinks" data-name="model">Model</a></li>
+                                          </ul>
+                                          <div>
+                                            <div>
+                          <pre class="example microlight"><span style="">&lt;</span><span style="">?</span><span style="color: #555; font-weight: bold;">xml</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">version</span><span style="">=</span><span style="color: #555;">"1.0"</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">encoding</span><span style="">=</span><span style="color: #555;">"UTF-8"</span><span style="">?</span><span style="">&gt;</span><span style="color: #555; font-weight: bold;">
+</span><span style="">&lt;!-- XML example cannot be generated --&gt;</span></pre>
+                                            </div>
+                                          </div>
+                                        </div></td>
+                                    </tr>
+                                    <tr class="response ">
+                                      <td class="col response-col_status">400</td>
+                                      <td class="col response-col_description"><div class="response-col_description__inner">
+                                        <div>
+                        <p>Invalid status value</p>
+                        </div>
+                                      </div></td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="opblock opblock-get">
+                      <div class="opblock-summary opblock-summary-get collapse-inner-button" data-id="4-2">
+                        <span class="opblock-summary-method">GET</span><span class="opblock-summary-path"><span>https://oneotelematic.azurewebsites.net/api/estadisticas/distancia/diaria</span></span>
+                        <div class="opblock-summary-description">Distancia por día</div>
+                        <button class="collapse-inner-button" data-id="4-2"></button>
+                      </div>
+                      <div id="summary_div_4-2" style="display: none">
+                        <div>
+                          <div style="height: auto; border: none; margin: 0px; padding: 0px;">
+                            <div class="opblock-body">
+                              <div class="opblock-description-wrapper">
+                                <div class="opblock-description">
+                                  <div>
+              <p>Devuelve el listado de distancia recorridas por día</p>
+              </div>
+                                </div>
+                              </div>
+                              <div class="opblock-section">
+                                <div class="opblock-section-header">
+                                  <h4 class="opblock-title">Parameters</h4>
+                                </div>
+                                <div class="table-container table-responsive">
+                                  <table class="parameters">
+                                    <thead>
+                                    <tr>
+                                      <th class="col col_header parameters-col_name">Name</th>
+                                      <th class="col col_header parameters-col_description">Description</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                      <td class="col parameters-col_name"><div class="parameter__name required">status<span style="color: red;">&nbsp;*</span></div>
+                                        <div class="parаmeter__type">array[string]</div>
+                                        <div class="parameter__in">(query)</div></td>
+                                      <td class="col parameters-col_description"><div>
+                      <p>Status values that need to be considered for filter</p>
+                      </div></td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                              <div class="execute-wrapper"></div>
+                              <div class="responses-wrapper">
+                                <div class="opblock-section-header">
+                                  <h4>Responses</h4>
+                                  <label>
+                                    <span>Response content type</span>
+                                    <span class="content-type-wrapper execute-content-type">
+                                      <select class="content-type">
+                                        <option value="application/json">application/json</option>
+                                      </select>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="responses-inner">
+                                  <table class="responses-table">
+                                    <thead>
+                                    <tr class="responses-header">
+                                      <td class="col col_header response-col_status">Code</td>
+                                      <td class="col col_header response-col_description">Description</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="response ">
+                                      <td class="col response-col_status">200</td>
+                                      <td class="col response-col_description"><div class="response-col_description__inner">
+                                        <div>
+                        <p>successful operation</p>
+                        </div>
+                                      </div>
+                                        <div>
+                                          <ul class="tab">
+                                            <li class="tabitem active"><a class="tablinks" data-name="example">Example Value</a></li>
+                                            <li class="tabitem"><a class="tablinks" data-name="model">Model</a></li>
+                                          </ul>
+                                          <div>
+                                            <div>
+                          <pre class="example microlight"><span style="">&lt;</span><span style="">?</span><span style="color: #555; font-weight: bold;">xml</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">version</span><span style="">=</span><span style="color: #555;">"1.0"</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">encoding</span><span style="">=</span><span style="color: #555;">"UTF-8"</span><span style="">?</span><span style="">&gt;</span><span style="color: #555; font-weight: bold;">
+</span><span style="">&lt;!-- XML example cannot be generated --&gt;</span></pre>
+                                            </div>
+                                          </div>
+                                        </div></td>
+                                    </tr>
+                                    <tr class="response ">
+                                      <td class="col response-col_status">400</td>
+                                      <td class="col response-col_description"><div class="response-col_description__inner">
+                                        <div>
+                        <p>Invalid status value</p>
+                        </div>
+                                      </div></td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+					<div class="opblock opblock-get">
+                      <div class="opblock-summary opblock-summary-get collapse-inner-button" data-id="4-3">
+                        <span class="opblock-summary-method">GET</span><span class="opblock-summary-path"><span>https://oneotelematic.azurewebsites.net/api/estadisticas/distancia/semana</span></span>
+                        <div class="opblock-summary-description">Distancia por Semana</div>
+                        <button class="collapse-inner-button" data-id="4-3"></button>
+                      </div>
+                      <div id="summary_div_4-3" style="display: none">
+                        <div>
+                          <div style="height: auto; border: none; margin: 0px; padding: 0px;">
+                            <div class="opblock-body">
+                              <div class="opblock-description-wrapper">
+                                <div class="opblock-description">
+                                  <div>
+              <p>Devuelve el listado de usuarios con la distancia recorrida semanalmente</p>
+              </div>
+                                </div>
+                              </div>
+                              <div class="opblock-section">
+                                <div class="opblock-section-header">
+                                  <h4 class="opblock-title">Parameters</h4>
+                                </div>
+                                <div class="table-container table-responsive">
+                                  <table class="parameters">
+                                    <thead>
+                                    <tr>
+                                      <th class="col col_header parameters-col_name">Name</th>
+                                      <th class="col col_header parameters-col_description">Description</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                      <td class="col parameters-col_name"><div class="parameter__name required">status<span style="color: red;">&nbsp;*</span></div>
+                                        <div class="parаmeter__type">array[string]</div>
+                                        <div class="parameter__in">(query)</div></td>
+                                      <td class="col parameters-col_description"><div>
+                      <p>Status values that need to be considered for filter</p>
+                      </div></td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                              <div class="execute-wrapper"></div>
+                              <div class="responses-wrapper">
+                                <div class="opblock-section-header">
+                                  <h4>Responses</h4>
+                                  <label>
+                                    <span>Response content type</span>
+                                    <span class="content-type-wrapper execute-content-type">
+                                      <select class="content-type">
+                                        <option value="application/json">application/json</option>
+                                      </select>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="responses-inner">
+                                  <table class="responses-table">
+                                    <thead>
+                                    <tr class="responses-header">
+                                      <td class="col col_header response-col_status">Code</td>
+                                      <td class="col col_header response-col_description">Description</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="response ">
+                                      <td class="col response-col_status">200</td>
+                                      <td class="col response-col_description"><div class="response-col_description__inner">
+                                        <div>
+                        <p>successful operation</p>
+                        </div>
+                                      </div>
+                                        <div>
+                                          <ul class="tab">
+                                            <li class="tabitem active"><a class="tablinks" data-name="example">Example Value</a></li>
+                                            <li class="tabitem"><a class="tablinks" data-name="model">Model</a></li>
+                                          </ul>
+                                          <div>
+                                            <div>
+                          <pre class="example microlight"><span style="">&lt;</span><span style="">?</span><span style="color: #555; font-weight: bold;">xml</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">version</span><span style="">=</span><span style="color: #555;">"1.0"</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">encoding</span><span style="">=</span><span style="color: #555;">"UTF-8"</span><span style="">?</span><span style="">&gt;</span><span style="color: #555; font-weight: bold;">
+</span><span style="">&lt;!-- XML example cannot be generated --&gt;</span></pre>
+                                            </div>
+                                          </div>
+                                        </div></td>
+                                    </tr>
+                                    <tr class="response ">
+                                      <td class="col response-col_status">400</td>
+                                      <td class="col response-col_description"><div class="response-col_description__inner">
+                                        <div>
+                        <p>Invalid status value</p>
+                        </div>
+                                      </div></td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+					<div class="opblock opblock-get">
+                      <div class="opblock-summary opblock-summary-get collapse-inner-button" data-id="4-4">
+                        <span class="opblock-summary-method">GET</span><span class="opblock-summary-path"><span>https://oneotelematic.azurewebsites.net/api/estadisticas/calificacion</span></span>
+                        <div class="opblock-summary-description">Calificación</div>
+                        <button class="collapse-inner-button" data-id="4-4"></button>
+                      </div>
+                      <div id="summary_div_4-4" style="display: none">
+                        <div>
+                          <div style="height: auto; border: none; margin: 0px; padding: 0px;">
+                            <div class="opblock-body">
+                              <div class="opblock-description-wrapper">
+                                <div class="opblock-description">
+                                  <div>
+              <p>Devuelve el listado de calificaciones por usuario</p>
+              </div>
+                                </div>
+                              </div>
+                              <div class="opblock-section">
+                                <div class="opblock-section-header">
+                                  <h4 class="opblock-title">Parameters</h4>
+                                </div>
+                                <div class="table-container table-responsive">
+                                  <table class="parameters">
+                                    <thead>
+                                    <tr>
+                                      <th class="col col_header parameters-col_name">Name</th>
+                                      <th class="col col_header parameters-col_description">Description</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                      <td class="col parameters-col_name"><div class="parameter__name required">status<span style="color: red;">&nbsp;*</span></div>
+                                        <div class="parаmeter__type">array[string]</div>
+                                        <div class="parameter__in">(query)</div></td>
+                                      <td class="col parameters-col_description"><div>
+                      <p>Status values that need to be considered for filter</p>
+                      </div></td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                              <div class="execute-wrapper"></div>
+                              <div class="responses-wrapper">
+                                <div class="opblock-section-header">
+                                  <h4>Responses</h4>
+                                  <label>
+                                    <span>Response content type</span>
+                                    <span class="content-type-wrapper execute-content-type">
+                                      <select class="content-type">
+                                        <option value="application/json">application/json</option>
+                                      </select>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="responses-inner">
+                                  <table class="responses-table">
+                                    <thead>
+                                    <tr class="responses-header">
+                                      <td class="col col_header response-col_status">Code</td>
+                                      <td class="col col_header response-col_description">Description</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="response ">
+                                      <td class="col response-col_status">200</td>
+                                      <td class="col response-col_description"><div class="response-col_description__inner">
+                                        <div>
+                        <p>successful operation</p>
+                        </div>
+                                      </div>
+                                        <div>
+                                          <ul class="tab">
+                                            <li class="tabitem active"><a class="tablinks" data-name="example">Example Value</a></li>
+                                            <li class="tabitem"><a class="tablinks" data-name="model">Model</a></li>
+                                          </ul>
+                                          <div>
+                                            <div>
+                          <pre class="example microlight"><span style="">&lt;</span><span style="">?</span><span style="color: #555; font-weight: bold;">xml</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">version</span><span style="">=</span><span style="color: #555;">"1.0"</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">encoding</span><span style="">=</span><span style="color: #555;">"UTF-8"</span><span style="">?</span><span style="">&gt;</span><span style="color: #555; font-weight: bold;">
+</span><span style="">&lt;!-- XML example cannot be generated --&gt;</span></pre>
+                                            </div>
+                                          </div>
+                                        </div></td>
+                                    </tr>
+                                    <tr class="response ">
+                                      <td class="col response-col_status">400</td>
+                                      <td class="col response-col_description"><div class="response-col_description__inner">
+                                        <div>
+                        <p>Invalid status value</p>
+                        </div>
+                                      </div></td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+					<div class="opblock opblock-get">
+                      <div class="opblock-summary opblock-summary-get collapse-inner-button" data-id="4-5">
+                        <span class="opblock-summary-method">GET</span><span class="opblock-summary-path"><span>https://oneotelematic.azurewebsites.net/api/estadisticas/dashboard</span></span>
+                        <div class="opblock-summary-description">Información general</div>
+                        <button class="collapse-inner-button" data-id="4-5"></button>
+                      </div>
+                      <div id="summary_div_4-5" style="display: none">
+                        <div>
+                          <div style="height: auto; border: none; margin: 0px; padding: 0px;">
+                            <div class="opblock-body">
+                              <div class="opblock-description-wrapper">
+                                <div class="opblock-description">
+                                  <div>
+              <p>Devuelve el listado de usuarios con información general de su estatus actual</p>
+              </div>
+                                </div>
+                              </div>
+                              <div class="opblock-section">
+                                <div class="opblock-section-header">
+                                  <h4 class="opblock-title">Parameters</h4>
+                                </div>
+                                <div class="table-container table-responsive">
+                                  <table class="parameters">
+                                    <thead>
+                                    <tr>
+                                      <th class="col col_header parameters-col_name">Name</th>
+                                      <th class="col col_header parameters-col_description">Description</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                      <td class="col parameters-col_name"><div class="parameter__name required">status<span style="color: red;">&nbsp;*</span></div>
+                                        <div class="parаmeter__type">array[string]</div>
+                                        <div class="parameter__in">(query)</div></td>
+                                      <td class="col parameters-col_description"><div>
+                      <p>Status values that need to be considered for filter</p>
+                      </div></td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                              <div class="execute-wrapper"></div>
+                              <div class="responses-wrapper">
+                                <div class="opblock-section-header">
+                                  <h4>Responses</h4>
+                                  <label>
+                                    <span>Response content type</span>
+                                    <span class="content-type-wrapper execute-content-type">
+                                      <select class="content-type">
+                                        <option value="application/json">application/json</option>
+                                      </select>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="responses-inner">
+                                  <table class="responses-table">
+                                    <thead>
+                                    <tr class="responses-header">
+                                      <td class="col col_header response-col_status">Code</td>
+                                      <td class="col col_header response-col_description">Description</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="response ">
+                                      <td class="col response-col_status">200</td>
+                                      <td class="col response-col_description"><div class="response-col_description__inner">
+                                        <div>
+                        <p>successful operation</p>
+                        </div>
+                                      </div>
+                                        <div>
+                                          <ul class="tab">
+                                            <li class="tabitem active"><a class="tablinks" data-name="example">Example Value</a></li>
+                                            <li class="tabitem"><a class="tablinks" data-name="model">Model</a></li>
+                                          </ul>
+                                          <div>
+                                            <div>
+                          <pre class="example microlight"><span style="">&lt;</span><span style="">?</span><span style="color: #555; font-weight: bold;">xml</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">version</span><span style="">=</span><span style="color: #555;">"1.0"</span><span style="color: #555; font-weight: bold;"> </span><span style="color: #555; font-weight: bold;">encoding</span><span style="">=</span><span style="color: #555;">"UTF-8"</span><span style="">?</span><span style="">&gt;</span><span style="color: #555; font-weight: bold;">
+</span><span style="">&lt;!-- XML example cannot be generated --&gt;</span></pre>
+                                            </div>
+                                          </div>
+                                        </div></td>
+                                    </tr>
+                                    <tr class="response ">
+                                      <td class="col response-col_status">400</td>
+                                      <td class="col response-col_description"><div class="response-col_description__inner">
+                                        <div>
+                        <p>Invalid status value</p>
+                        </div>
+                                      </div></td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    
+                  </div>
+                </div>
+                
+-->
+
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>  
+    
+       
+    </div>
+  </div>
+</div>
+  </div>
+      </div>
+    </div>
+
+<!-- END CONTAINER -->
+
+
+<!-- ================================================
+jQuery Library
+================================================ -->
+<script src="js/jquery.min.js"></script>
+
+<!-- ================================================
+Bootstrap Core JavaScript File
+================================================ -->
+<script src="js/bootstrap/bootstrap.min.js"></script>
+
+<!-- ================================================
+Plugin.js - Some Specific JS codes for Plugin Settings
+================================================ -->
+<script src="js/plugins.js"></script>
+
+<!-- ================================================
+Bootstrap Toggle
+================================================ -->
+<script src="js/bootstrap-toggle/bootstrap-toggle.min.js"></script>
+
+<!-- ================================================
+Sparkline
+================================================ -->
+<!-- main file -->
+<script src="js/sparkline/sparkline.js"></script>
+<!-- demo codes -->
+<script src="js/sparkline/sparkline-plugin.js"></script>
+
+<!-- ================================================
+Data Tables
+================================================ -->
+<script src="js/datatables/datatables.min.js"></script>
+
+<!-- ================================================
+jQuery UI
+================================================ -->
+<script src="js/jquery-ui/jquery-ui.min.js"></script>
+
+<!-- ================================================
+Moment.js
+================================================ -->
+<script src="js/moment/moment.min.js"></script>
+
+<!-- ================================================
+Prism
+================================================ -->
+<script src="js/prism.js"></script>
+  <script>document.createElement('section');
+  var duration = 500, easing = 'swing';</script>
+<script>
+
+  jQuery('.collapse-inner-button').on('click', function(){
+
+        var div_value = jQuery(this).attr("data-id");
+
+        jQuery('#summary_div_'+div_value).toggle();
+        jQuery(this).toggleClass('collapse-inner-toggle');
+
+
+  });
+
+</script>
+<script src="js/script.js"></script>
+  <!-- ================================================
+Scroll
+================================================ -->
+
+<script src="js/jquery.easing.js"></script>
+<script src="js/scroll.js"></script>
+<script src="js/common.js"></script>
+
+  </body>
+</html>
